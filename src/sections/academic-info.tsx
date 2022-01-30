@@ -1,8 +1,9 @@
 import Image from 'next/image'
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useContext } from 'react'
 import styled from 'styled-components'
 import { FadeIn } from '../common/components/fade-in'
 import { Section } from '../common/components/section'
+import { LocalizationContext } from '../common/contexts/localization-context'
 
 const ContentWrapper = styled.div`
   width: 65%;
@@ -53,59 +54,81 @@ const AcademicItem = styled.li`
     margin-bottom: 20px;
   }
 `
-export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => (
-  <Section title="Formação" color="black" backgroundColor="white" ref={ref}>
-    <ContentWrapper>
-      <LogosWrapper>
-        <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={0}>
-          <LogoContainer>
-            <Image src="/images/unicamp.webp" height={120} width={120} layout="fixed" alt="Logotipo da Unicamp" />
-          </LogoContainer>
-        </FadeIn>
-        <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={100}>
-          <LogoContainer>
-            <Image src="/images/inpg.webp" height={120} width={120} layout="fixed" alt="Logotipo do INPG" />
-          </LogoContainer>
-        </FadeIn>
-        <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={200}>
-          <LogoContainer>
-            <Image src="/images/tera.webp" height={120} width={120} layout="fixed" alt="Logotipo da Tera" />
-          </LogoContainer>
-        </FadeIn>
-        <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={300}>
-          <LogoContainer>
-            <Image
-              src="/images/embedded.webp"
-              height={120}
-              width={120}
-              layout="fixed"
-              alt="Logotipo da Embedded Labworks"
-            />
-          </LogoContainer>
-        </FadeIn>
-      </LogosWrapper>
-      <ul>
-        <AcademicItem>
-          <FadeIn from="left" offsetPosition={300} offsetTrigger={-100}>
-            Graduação: Engenharia Elétrica na UNICAMP
+export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
+  const { localization } = useContext(LocalizationContext)
+
+  return (
+    <Section title={localization('education')} color="black" backgroundColor="white" ref={ref}>
+      <ContentWrapper>
+        <LogosWrapper>
+          <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={0}>
+            <LogoContainer>
+              <Image
+                src="/images/unicamp.webp"
+                height={120}
+                width={120}
+                layout="fixed"
+                alt={localization('unicampLogoAltText')}
+              />
+            </LogoContainer>
           </FadeIn>
-        </AcademicItem>
-        <AcademicItem>
-          <FadeIn from="right" offsetPosition={300} offsetTrigger={-100}>
-            Pós-graduação: Gestão Estratégica de Negócios no INPG
+          <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={100}>
+            <LogoContainer>
+              <Image
+                src="/images/inpg.webp"
+                height={120}
+                width={120}
+                layout="fixed"
+                alt={localization('inpgLogoAltText')}
+              />
+            </LogoContainer>
           </FadeIn>
-        </AcademicItem>
-        <AcademicItem>
-          <FadeIn from="left" offsetPosition={300} offsetTrigger={-100}>
-            Bootcamp de Machine Learning na Tera
+          <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={200}>
+            <LogoContainer>
+              <Image
+                src="/images/tera.webp"
+                height={120}
+                width={120}
+                layout="fixed"
+                alt={localization('teraLogoAltText')}
+              />
+            </LogoContainer>
           </FadeIn>
-        </AcademicItem>
-        <AcademicItem>
-          <FadeIn from="right" offsetPosition={300} offsetTrigger={-100}>
-            Curso de Linux Device Drivers na Embedded Labworks
+          <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={300}>
+            <LogoContainer>
+              <Image
+                src="/images/embedded.webp"
+                height={120}
+                width={120}
+                layout="fixed"
+                alt={localization('embeddedLabworksLogoAltText')}
+              />
+            </LogoContainer>
           </FadeIn>
-        </AcademicItem>
-      </ul>
-    </ContentWrapper>
-  </Section>
-))
+        </LogosWrapper>
+        <ul>
+          <AcademicItem>
+            <FadeIn from="left" offsetPosition={300} offsetTrigger={-100}>
+              {localization('degree')}
+            </FadeIn>
+          </AcademicItem>
+          <AcademicItem>
+            <FadeIn from="right" offsetPosition={300} offsetTrigger={-100}>
+              {localization('businessPostGratuation')}
+            </FadeIn>
+          </AcademicItem>
+          <AcademicItem>
+            <FadeIn from="left" offsetPosition={300} offsetTrigger={-100}>
+              {localization('machineLearningBootcamp')}
+            </FadeIn>
+          </AcademicItem>
+          <AcademicItem>
+            <FadeIn from="right" offsetPosition={300} offsetTrigger={-100}>
+              {localization('linux')}
+            </FadeIn>
+          </AcademicItem>
+        </ul>
+      </ContentWrapper>
+    </Section>
+  )
+})

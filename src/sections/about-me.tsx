@@ -1,7 +1,8 @@
 import Image from 'next/image'
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useContext } from 'react'
 import styled from 'styled-components'
 import { Section } from '../common/components/section'
+import { LocalizationContext } from '../common/contexts/localization-context'
 
 const ContentWrapper = styled.div`
   width: 65%;
@@ -25,23 +26,23 @@ const PictureContainer = styled.div`
   width: 320px;
 `
 
-export const AboutMeSection = forwardRef<HTMLElement>((_props, ref) => (
-  <Section title="Sobre mim" color="white" backgroundColor="#222222" ref={ref}>
-    <ContentWrapper>
-      <PictureContainer>
-        <Image
-          src="/images/bruno.webp"
-          height={320}
-          width={320}
-          layout="fixed"
-          alt="Foto do Bruno com um farol ao fundo, em uma praia de pedras mostrando o mar ao fundo"
-        />
-      </PictureContainer>
-      <p>
-        Meu nome é Bruno Luvizotto. Sou programador, formado em engenharia elétrica pela UNICAMP e estou sempre em busca
-        de aprimorar meus conhecimentos. Tenho experiência com programação em JavaScript / Typescript (React,
-        React-Native e Node), Python, C e C++ (Qt). Também já trabalhei com desenvolvimento de aplicativos mobile.
-      </p>
-    </ContentWrapper>
-  </Section>
-))
+export const AboutMeSection = forwardRef<HTMLElement>((_props, ref) => {
+  const { localization } = useContext(LocalizationContext)
+
+  return (
+    <Section title={localization('aboutMe')} color="white" backgroundColor="#222222" ref={ref}>
+      <ContentWrapper>
+        <PictureContainer>
+          <Image
+            src="/images/bruno.webp"
+            height={320}
+            width={320}
+            layout="fixed"
+            alt={localization('profilePictureAlt')}
+          />
+        </PictureContainer>
+        <p>{localization('aboutMeText')}</p>
+      </ContentWrapper>
+    </Section>
+  )
+})

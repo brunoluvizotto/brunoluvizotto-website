@@ -1,5 +1,6 @@
-import React, { FC, useEffect, useRef, useState } from 'react'
+import React, { FC, useContext, useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
+import { LocalizationContext } from '../common/contexts/localization-context'
 
 type SectionProps = {
   imageOffset: number
@@ -37,6 +38,8 @@ export const NameSection: FC = () => {
   const [imageOffset, setImageOffset] = useState(50)
   const ref = useRef<HTMLElement>(null)
 
+  const { localization } = useContext(LocalizationContext)
+
   const calculateOffset = () => {
     if (!ref.current) {
       return
@@ -58,7 +61,7 @@ export const NameSection: FC = () => {
   return (
     <Section imageOffset={imageOffset} ref={ref}>
       <Name>Bruno Luvizotto</Name>
-      <Profession>Engenheiro de Software</Profession>
+      <Profession>{localization('jobTitle')}</Profession>
     </Section>
   )
 }

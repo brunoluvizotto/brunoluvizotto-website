@@ -1,8 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useContext } from 'react'
 import { createGlobalStyle } from 'styled-components'
 import { Header } from '../common/components/header'
+import { LocalizationContext } from '../common/contexts/localization-context'
 import { useIsVisible } from '../common/hooks/use-is-visible'
 import { AboutMeSection } from '../sections/about-me'
 import { AcademicInfoSection } from '../sections/academic-info'
@@ -42,6 +44,8 @@ const Home: NextPage = () => {
     minVisibleHeight: 400,
   })
 
+  const { localization } = useContext(LocalizationContext)
+
   return (
     <>
       <Head>
@@ -53,28 +57,28 @@ const Home: NextPage = () => {
       <main>
         <Header
           menuElements={[
-            { label: 'Sobre mim', isVisible: isAboutVisible, ref: aboutRef },
+            { label: localization('aboutMe'), isVisible: isAboutVisible, ref: aboutRef },
             {
-              label: 'Formação',
+              label: localization('education'),
               isVisible: isAcamidecInfoVisible,
               ref: academicInfoRef,
             },
             {
-              label: 'Conhecimentos',
+              label: localization('skills'),
               isVisible: isSkillsVisible,
               ref: skillsRef,
             },
             {
-              label: 'Experiência',
+              label: localization('experience'),
               isVisible: isExperienceVisible,
               ref: experienceRef,
             },
             {
-              label: 'Projetos',
+              label: localization('projects'),
               isVisible: isProjectsVisible,
               ref: projectsRef,
             },
-            { label: 'Contato', isVisible: isContactVisible, ref: contactRef },
+            { label: localization('contact'), isVisible: isContactVisible, ref: contactRef },
           ]}
         />
         <NameSection />
