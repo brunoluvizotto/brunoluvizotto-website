@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { FC } from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { Section } from "../common/components/section";
 
@@ -25,27 +25,25 @@ const PictureContainer = styled.div`
   width: 320px;
 `;
 
-export const AboutMeSection: FC = () => {
-  return (
-    <Section title="Sobre mim" color="white" backgroundColor="#222222">
-      <ContentWrapper>
-        <PictureContainer>
-          <Image
-            src="/images/bruno.webp"
-            height={320}
-            width={320}
-            layout="fixed"
-            alt="Foto do Bruno com um farol ao fundo, em uma praia de pedras mostrando o mar ao fundo"
-          />
-        </PictureContainer>
-        <p>
-          Meu nome é Bruno Luvizotto. Sou programador, formado em engenharia
-          elétrica pela UNICAMP e estou sempre em busca de aprimorar meus
-          conhecimentos. Tenho experiência com programação em JavaScript /
-          Typescript (React, React-Native e Node), Python, C e C++ (Qt). Também
-          já trabalhei com desenvolvimento de aplicativos mobile.
-        </p>
-      </ContentWrapper>
-    </Section>
-  );
-};
+export const AboutMeSection = forwardRef<HTMLElement>((_props, ref) => (
+  <Section title="Sobre mim" color="white" backgroundColor="#222222" ref={ref}>
+    <ContentWrapper>
+      <PictureContainer>
+        <Image
+          src="/images/bruno.webp"
+          height={320}
+          width={320}
+          layout="fixed"
+          alt="Foto do Bruno com um farol ao fundo, em uma praia de pedras mostrando o mar ao fundo"
+        />
+      </PictureContainer>
+      <p>
+        Meu nome é Bruno Luvizotto. Sou programador, formado em engenharia
+        elétrica pela UNICAMP e estou sempre em busca de aprimorar meus
+        conhecimentos. Tenho experiência com programação em JavaScript /
+        Typescript (React, React-Native e Node), Python, C e C++ (Qt). Também já
+        trabalhei com desenvolvimento de aplicativos mobile.
+      </p>
+    </ContentWrapper>
+  </Section>
+));

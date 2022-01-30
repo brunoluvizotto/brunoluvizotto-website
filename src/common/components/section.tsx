@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, forwardRef } from "react";
 import styled from "styled-components";
 
 interface WrapperProps {
@@ -39,18 +39,27 @@ const Title = styled.p`
 
 type Props = WrapperProps & {
   title: string;
+  ref: React.Ref<HTMLElement>;
 };
 
-export const Section: FC<Props> = ({
-  title,
-  color,
-  backgroundColor,
-  children,
-}) => {
-  return (
-    <Wrapper color={color} backgroundColor={backgroundColor}>
+// export const Section: FC<Props> = (props) => {
+//   const SectionElement = forwardRef<HTMLElement, Props>(
+//     ({ title, color, backgroundColor, children }, ref) => (
+//       <Wrapper color={color} backgroundColor={backgroundColor} ref={ref}>
+//         <Title>{title}</Title>
+//         {children}
+//       </Wrapper>
+//     )
+//   );
+
+//   return <SectionElement {...props} />;
+// };
+
+export const Section: FC<Props> = forwardRef<HTMLElement, Props>(
+  ({ title, color, backgroundColor, children }, ref) => (
+    <Wrapper color={color} backgroundColor={backgroundColor} ref={ref}>
       <Title>{title}</Title>
       {children}
     </Wrapper>
-  );
-};
+  )
+);

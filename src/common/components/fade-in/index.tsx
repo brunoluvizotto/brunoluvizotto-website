@@ -1,5 +1,5 @@
 import { FC } from "react";
-import useIsVisible from "./hooks/use-is-visible";
+import { useIsVisible } from "../../hooks/use-is-visible";
 import { FadeDiv, From } from "./styles/fade-div";
 
 type Props = {
@@ -16,7 +16,9 @@ export const FadeIn: FC<Props> = ({
   delay = 0,
   children,
 }) => {
-  const [isVisible, isVisibleRef] = useIsVisible<HTMLDivElement>(offsetTrigger);
+  const [isVisible, isVisibleRef] = useIsVisible<HTMLDivElement>({
+    offset: offsetTrigger,
+  });
 
   return (
     <FadeDiv

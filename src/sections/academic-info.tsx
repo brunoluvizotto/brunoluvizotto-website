@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { FC } from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { FadeIn } from "../common/components/fade-in";
 import { Section } from "../common/components/section";
@@ -53,100 +53,97 @@ const AcademicItem = styled.li`
     margin-bottom: 20px;
   }
 `;
-
-export const AcademicInfoSection: FC = () => {
-  return (
-    <Section title="Formação" color="black" backgroundColor="white">
-      <ContentWrapper>
-        <LogosWrapper>
-          <FadeIn
-            from="bottom"
-            offsetPosition={400}
-            offsetTrigger={200}
-            delay={0}
-          >
-            <LogoContainer>
-              <Image
-                src="/images/unicamp.webp"
-                height={120}
-                width={120}
-                layout="fixed"
-                alt="Logotipo da Unicamp"
-              />
-            </LogoContainer>
+export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => (
+  <Section title="Formação" color="black" backgroundColor="white" ref={ref}>
+    <ContentWrapper>
+      <LogosWrapper>
+        <FadeIn
+          from="bottom"
+          offsetPosition={400}
+          offsetTrigger={200}
+          delay={0}
+        >
+          <LogoContainer>
+            <Image
+              src="/images/unicamp.webp"
+              height={120}
+              width={120}
+              layout="fixed"
+              alt="Logotipo da Unicamp"
+            />
+          </LogoContainer>
+        </FadeIn>
+        <FadeIn
+          from="bottom"
+          offsetPosition={400}
+          offsetTrigger={200}
+          delay={100}
+        >
+          <LogoContainer>
+            <Image
+              src="/images/inpg.webp"
+              height={120}
+              width={120}
+              layout="fixed"
+              alt="Logotipo do INPG"
+            />
+          </LogoContainer>
+        </FadeIn>
+        <FadeIn
+          from="bottom"
+          offsetPosition={400}
+          offsetTrigger={200}
+          delay={200}
+        >
+          <LogoContainer>
+            <Image
+              src="/images/tera.webp"
+              height={120}
+              width={120}
+              layout="fixed"
+              alt="Logotipo da Tera"
+            />
+          </LogoContainer>
+        </FadeIn>
+        <FadeIn
+          from="bottom"
+          offsetPosition={400}
+          offsetTrigger={200}
+          delay={300}
+        >
+          <LogoContainer>
+            <Image
+              src="/images/embedded.webp"
+              height={120}
+              width={120}
+              layout="fixed"
+              alt="Logotipo da Embedded Labworks"
+            />
+          </LogoContainer>
+        </FadeIn>
+      </LogosWrapper>
+      <ul>
+        <AcademicItem>
+          <FadeIn from="left" offsetPosition={300} offsetTrigger={-100}>
+            Graduação: Engenharia Elétrica na UNICAMP
           </FadeIn>
-          <FadeIn
-            from="bottom"
-            offsetPosition={400}
-            offsetTrigger={200}
-            delay={100}
-          >
-            <LogoContainer>
-              <Image
-                src="/images/inpg.webp"
-                height={120}
-                width={120}
-                layout="fixed"
-                alt="Logotipo do INPG"
-              />
-            </LogoContainer>
+        </AcademicItem>
+        <AcademicItem>
+          <FadeIn from="right" offsetPosition={300} offsetTrigger={-100}>
+            Pós-graduação: Gestão Estratégica de Negócios no INPG
           </FadeIn>
-          <FadeIn
-            from="bottom"
-            offsetPosition={400}
-            offsetTrigger={200}
-            delay={200}
-          >
-            <LogoContainer>
-              <Image
-                src="/images/tera.webp"
-                height={120}
-                width={120}
-                layout="fixed"
-                alt="Logotipo da Tera"
-              />
-            </LogoContainer>
+        </AcademicItem>
+        <AcademicItem>
+          <FadeIn from="left" offsetPosition={300} offsetTrigger={-100}>
+            Bootcamp de Machine Learning na Tera
           </FadeIn>
-          <FadeIn
-            from="bottom"
-            offsetPosition={400}
-            offsetTrigger={200}
-            delay={300}
-          >
-            <LogoContainer>
-              <Image
-                src="/images/embedded.webp"
-                height={120}
-                width={120}
-                layout="fixed"
-                alt="Logotipo da Embedded Labworks"
-              />
-            </LogoContainer>
+        </AcademicItem>
+        <AcademicItem>
+          <FadeIn from="right" offsetPosition={300} offsetTrigger={-100}>
+            Curso de Linux Device Drivers na Embedded Labworks
           </FadeIn>
-        </LogosWrapper>
-        <ul>
-          <AcademicItem>
-            <FadeIn from="left" offsetPosition={300} offsetTrigger={-100}>
-              Graduação: Engenharia Elétrica na UNICAMP
-            </FadeIn>
-          </AcademicItem>
-          <AcademicItem>
-            <FadeIn from="right" offsetPosition={300} offsetTrigger={-100}>
-              Pós-graduação: Gestão Estratégica de Negócios no INPG
-            </FadeIn>
-          </AcademicItem>
-          <AcademicItem>
-            <FadeIn from="left" offsetPosition={300} offsetTrigger={-100}>
-              Bootcamp de Machine Learning na Tera
-            </FadeIn>
-          </AcademicItem>
-          <AcademicItem>
-            <FadeIn from="right" offsetPosition={300} offsetTrigger={-100}>
-              Curso de Linux Device Drivers na Embedded Labworks
-            </FadeIn>
-          </AcademicItem>
-        </ul>
-      </ContentWrapper>
-    </Section>
-  );
-};
+        </AcademicItem>
+      </ul>
+    </ContentWrapper>
+  </Section>
+));

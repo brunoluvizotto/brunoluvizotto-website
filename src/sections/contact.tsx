@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { Section } from "../common/components/section";
 
@@ -11,12 +11,10 @@ const Text = styled.p`
   font-size: 30px;
 `;
 
-export const ContactSection: FC = () => {
-  return (
-    <Section title="Contato" color="white" backgroundColor="#222222">
-      <ContentWrapper>
-        <Text>brunoluvizotto@gmail.com</Text>
-      </ContentWrapper>
-    </Section>
-  );
-};
+export const ContactSection = forwardRef<HTMLElement>((_props, ref) => (
+  <Section title="Contato" color="white" backgroundColor="#222222" ref={ref}>
+    <ContentWrapper>
+      <Text>brunoluvizotto@gmail.com</Text>
+    </ContentWrapper>
+  </Section>
+));
