@@ -1,7 +1,7 @@
-import Image from "next/image";
-import React, { forwardRef } from "react";
-import styled from "styled-components";
-import { Section } from "../common/components/section";
+import Image from 'next/image'
+import React, { forwardRef } from 'react'
+import styled from 'styled-components'
+import { Section } from '../common/components/section'
 
 const ContentWrapper = styled.div`
   width: 65%;
@@ -18,12 +18,12 @@ const ContentWrapper = styled.div`
     font-size: 22px;
     line-height: 1.4em;
   }
-`;
+`
 
 const PictureContainer = styled.div`
   height: 320px;
   width: 320px;
-`;
+`
 
 export const AboutMeSection = forwardRef<HTMLElement>((_props, ref) => (
   <Section title="Sobre mim" color="white" backgroundColor="#222222" ref={ref}>
@@ -38,12 +38,10 @@ export const AboutMeSection = forwardRef<HTMLElement>((_props, ref) => (
         />
       </PictureContainer>
       <p>
-        Meu nome é Bruno Luvizotto. Sou programador, formado em engenharia
-        elétrica pela UNICAMP e estou sempre em busca de aprimorar meus
-        conhecimentos. Tenho experiência com programação em JavaScript /
-        Typescript (React, React-Native e Node), Python, C e C++ (Qt). Também já
-        trabalhei com desenvolvimento de aplicativos mobile.
+        Meu nome é Bruno Luvizotto. Sou programador, formado em engenharia elétrica pela UNICAMP e estou sempre em busca
+        de aprimorar meus conhecimentos. Tenho experiência com programação em JavaScript / Typescript (React,
+        React-Native e Node), Python, C e C++ (Qt). Também já trabalhei com desenvolvimento de aplicativos mobile.
       </p>
     </ContentWrapper>
   </Section>
-));
+))

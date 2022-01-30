@@ -1,8 +1,8 @@
-import Image from "next/image";
-import React, { forwardRef } from "react";
-import styled from "styled-components";
-import { FadeIn } from "../common/components/fade-in";
-import { Section } from "../common/components/section";
+import Image from 'next/image'
+import React, { forwardRef } from 'react'
+import styled from 'styled-components'
+import { FadeIn } from '../common/components/fade-in'
+import { Section } from '../common/components/section'
 
 const ContentWrapper = styled.div`
   width: 65%;
@@ -22,7 +22,7 @@ const ContentWrapper = styled.div`
     font-size: 20px;
     gap: 30px;
   }
-`;
+`
 
 const LogosWrapper = styled.div`
   display: grid;
@@ -40,77 +40,39 @@ const LogosWrapper = styled.div`
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
   }
-`;
+`
 
 const LogoContainer = styled.div`
   height: 120px;
   width: 120px;
-`;
+`
 
 const AcademicItem = styled.li`
   list-style: none;
   &:not(:last-child) {
     margin-bottom: 20px;
   }
-`;
+`
 export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => (
   <Section title="Formação" color="black" backgroundColor="white" ref={ref}>
     <ContentWrapper>
       <LogosWrapper>
-        <FadeIn
-          from="bottom"
-          offsetPosition={400}
-          offsetTrigger={200}
-          delay={0}
-        >
+        <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={0}>
           <LogoContainer>
-            <Image
-              src="/images/unicamp.webp"
-              height={120}
-              width={120}
-              layout="fixed"
-              alt="Logotipo da Unicamp"
-            />
+            <Image src="/images/unicamp.webp" height={120} width={120} layout="fixed" alt="Logotipo da Unicamp" />
           </LogoContainer>
         </FadeIn>
-        <FadeIn
-          from="bottom"
-          offsetPosition={400}
-          offsetTrigger={200}
-          delay={100}
-        >
+        <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={100}>
           <LogoContainer>
-            <Image
-              src="/images/inpg.webp"
-              height={120}
-              width={120}
-              layout="fixed"
-              alt="Logotipo do INPG"
-            />
+            <Image src="/images/inpg.webp" height={120} width={120} layout="fixed" alt="Logotipo do INPG" />
           </LogoContainer>
         </FadeIn>
-        <FadeIn
-          from="bottom"
-          offsetPosition={400}
-          offsetTrigger={200}
-          delay={200}
-        >
+        <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={200}>
           <LogoContainer>
-            <Image
-              src="/images/tera.webp"
-              height={120}
-              width={120}
-              layout="fixed"
-              alt="Logotipo da Tera"
-            />
+            <Image src="/images/tera.webp" height={120} width={120} layout="fixed" alt="Logotipo da Tera" />
           </LogoContainer>
         </FadeIn>
-        <FadeIn
-          from="bottom"
-          offsetPosition={400}
-          offsetTrigger={200}
-          delay={300}
-        >
+        <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={300}>
           <LogoContainer>
             <Image
               src="/images/embedded.webp"
@@ -146,4 +108,4 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => (
       </ul>
     </ContentWrapper>
   </Section>
-));
+))

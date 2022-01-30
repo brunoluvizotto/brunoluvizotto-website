@@ -1,9 +1,9 @@
-import React, { FC, forwardRef } from "react";
-import styled from "styled-components";
+import React, { FC, forwardRef } from 'react'
+import styled from 'styled-components'
 
 interface WrapperProps {
-  color: string;
-  backgroundColor: string;
+  color: string
+  backgroundColor: string
 }
 
 const Wrapper = styled.section<WrapperProps>`
@@ -11,12 +11,12 @@ const Wrapper = styled.section<WrapperProps>`
   text-align: center;
   background-color: #222222;
   padding: 120px;
-  ${(props) =>
+  ${props =>
     props.color &&
     `
         color: ${props.color};
       `};
-  ${(props) =>
+  ${props =>
     props.backgroundColor &&
     `
       background-color: ${props.backgroundColor};
@@ -25,7 +25,7 @@ const Wrapper = styled.section<WrapperProps>`
   @media only screen and (max-width: 600px) {
     padding: 100px 20px;
   }
-`;
+`
 
 const Title = styled.p`
   font-size: 55px;
@@ -35,12 +35,12 @@ const Title = styled.p`
     margin-bottom: 40px;
     font-size: 40px;
   }
-`;
+`
 
 type Props = WrapperProps & {
-  title: string;
-  ref: React.Ref<HTMLElement>;
-};
+  title: string
+  ref: React.Ref<HTMLElement>
+}
 
 // export const Section: FC<Props> = (props) => {
 //   const SectionElement = forwardRef<HTMLElement, Props>(
@@ -55,11 +55,9 @@ type Props = WrapperProps & {
 //   return <SectionElement {...props} />;
 // };
 
-export const Section: FC<Props> = forwardRef<HTMLElement, Props>(
-  ({ title, color, backgroundColor, children }, ref) => (
-    <Wrapper color={color} backgroundColor={backgroundColor} ref={ref}>
-      <Title>{title}</Title>
-      {children}
-    </Wrapper>
-  )
-);
+export const Section: FC<Props> = forwardRef<HTMLElement, Props>(({ title, color, backgroundColor, children }, ref) => (
+  <Wrapper color={color} backgroundColor={backgroundColor} ref={ref}>
+    <Title>{title}</Title>
+    {children}
+  </Wrapper>
+))

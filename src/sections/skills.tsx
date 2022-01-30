@@ -1,8 +1,8 @@
-import React, { forwardRef } from "react";
-import styled from "styled-components";
-import { FadeIn } from "../common/components/fade-in";
-import { Section } from "../common/components/section";
-import { SkillCard } from "../common/components/skill-card";
+import React, { forwardRef } from 'react'
+import styled from 'styled-components'
+import { FadeIn } from '../common/components/fade-in'
+import { Section } from '../common/components/section'
+import { SkillCard } from '../common/components/skill-card'
 
 const ContentWrapper = styled.div`
   width: 65%;
@@ -24,15 +24,10 @@ const ContentWrapper = styled.div`
   @media only screen and (max-width: 600px) {
     grid-template-columns: 1fr;
   }
-`;
+`
 
 export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => (
-  <Section
-    title="Conhecimentos"
-    color="black"
-    backgroundColor="#F2F2F2"
-    ref={ref}
-  >
+  <Section title="Conhecimentos" color="black" backgroundColor="#F2F2F2" ref={ref}>
     <ContentWrapper>
       <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={0}>
         <SkillCard
@@ -43,12 +38,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => (
           description="Tenho experiência em programação em Javascript / Typescript, Python, C e C++. Já desenvolvi software web - backend e frontend - utilizando ferramentas de computação em nuvem (GCP e AWS), firmware bare-metal e software para sistemas embarcados, além de scripts para automação de tarefas sempre que necessário."
         />
       </FadeIn>
-      <FadeIn
-        from="bottom"
-        offsetPosition={400}
-        offsetTrigger={200}
-        delay={100}
-      >
+      <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={100}>
         <SkillCard
           title="Projetos"
           subTitle="Metodologias Ágeis / Scrum"
@@ -57,12 +47,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => (
           description="Após trabalhar por algum tempo com metodologias ágeis, passei a considerá-las muito importantes para o planejamento e gerenciamento dos times. Sistemas de tickets como Scrum e Kanban ajudam a manter o controle. Integração contínua (continuous integration - CI) também agiliza bastante a entrega de um excelente produto."
         />
       </FadeIn>
-      <FadeIn
-        from="bottom"
-        offsetPosition={400}
-        offsetTrigger={200}
-        delay={200}
-      >
+      <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={200}>
         <SkillCard
           title="UI / Front-end"
           subTitle="React, Vue e Qt/Qml"
@@ -80,12 +65,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => (
           description="Nos diversos projetos onde trabalhei, já utilizei estas três ferramentas de versionamento: Git (Github, Gitlab, BitBucket), Mercurial e SVN. As três cumprem seu papel de versionar, mas a minha preferência, pelas ferramentas que oferece, é o Git."
         />
       </FadeIn>
-      <FadeIn
-        from="bottom"
-        offsetPosition={400}
-        offsetTrigger={200}
-        delay={100}
-      >
+      <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={100}>
         <SkillCard
           title="Dispositivos IOT"
           subTitle="Comunicação Celular"
@@ -94,12 +74,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => (
           description="A internet das coisas é o futuro dos dispositivos inteligentes. Já trabalhei em projetos com dispositivos conectados via rede celular 2G (GSM), 3G (UMTS) e 4G (LTE) e via comunicação satelital (aplicações mais sensíveis) trocando mensagens com protocolos definidos para os servidores da aplicação."
         />
       </FadeIn>
-      <FadeIn
-        from="bottom"
-        offsetPosition={400}
-        offsetTrigger={200}
-        delay={200}
-      >
+      <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={200}>
         <SkillCard
           title="Habilidades Pessoais"
           subTitle="Comunicação / Trabalho em equipe"
@@ -110,4 +85,4 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => (
       </FadeIn>
     </ContentWrapper>
   </Section>
-));
+))

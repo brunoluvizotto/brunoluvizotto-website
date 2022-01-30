@@ -1,16 +1,16 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import { createGlobalStyle } from "styled-components";
-import { Header } from "../common/components/header";
-import { useIsVisible } from "../common/hooks/use-is-visible";
-import { AboutMeSection } from "../sections/about-me";
-import { AcademicInfoSection } from "../sections/academic-info";
-import { ContactSection } from "../sections/contact";
-import { ExperienceSection } from "../sections/experience";
-import { NameSection } from "../sections/name";
-import { PersonalProjectsSection } from "../sections/personal-projects";
-import { SkillsSection } from "../sections/skills";
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import Image from 'next/image'
+import { createGlobalStyle } from 'styled-components'
+import { Header } from '../common/components/header'
+import { useIsVisible } from '../common/hooks/use-is-visible'
+import { AboutMeSection } from '../sections/about-me'
+import { AcademicInfoSection } from '../sections/academic-info'
+import { ContactSection } from '../sections/contact'
+import { ExperienceSection } from '../sections/experience'
+import { NameSection } from '../sections/name'
+import { PersonalProjectsSection } from '../sections/personal-projects'
+import { SkillsSection } from '../sections/skills'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -22,39 +22,25 @@ const GlobalStyle = createGlobalStyle`
   html {
     scroll-behavior: smooth;
   }
-`;
+`
 
 const Home: NextPage = () => {
-  const [isAboutVisible, aboutRef] = useIsVisible<HTMLElement>({
+  const isVisibleConfig = {
     persistent: false,
     offset: 200,
-    minVisibleHeight: 300,
-  });
-  const [isAcamidecInfoVisible, academicInfoRef] = useIsVisible<HTMLElement>({
-    persistent: false,
-    offset: 200,
-    minVisibleHeight: 300,
-  });
-  const [isSkillsVisible, skillsRef] = useIsVisible<HTMLElement>({
-    persistent: false,
-    offset: 200,
-    minVisibleHeight: 300,
-  });
-  const [isExperienceVisible, experienceRef] = useIsVisible<HTMLElement>({
-    persistent: false,
-    offset: 200,
-    minVisibleHeight: 300,
-  });
-  const [isProjectsVisible, projectsRef] = useIsVisible<HTMLElement>({
-    persistent: false,
-    offset: 200,
-    minVisibleHeight: 300,
-  });
+    minVisibleHeight: 500,
+  }
+
+  const [isAboutVisible, aboutRef] = useIsVisible<HTMLElement>(isVisibleConfig)
+  const [isAcamidecInfoVisible, academicInfoRef] = useIsVisible<HTMLElement>(isVisibleConfig)
+  const [isSkillsVisible, skillsRef] = useIsVisible<HTMLElement>(isVisibleConfig)
+  const [isExperienceVisible, experienceRef] = useIsVisible<HTMLElement>(isVisibleConfig)
+  const [isProjectsVisible, projectsRef] = useIsVisible<HTMLElement>(isVisibleConfig)
   const [isContactVisible, contactRef] = useIsVisible<HTMLElement>({
     persistent: false,
     offset: 100,
-    minVisibleHeight: 300,
-  });
+    minVisibleHeight: 400,
+  })
 
   return (
     <>
@@ -67,28 +53,28 @@ const Home: NextPage = () => {
       <main>
         <Header
           menuElements={[
-            { label: "Sobre mim", isVisible: isAboutVisible, ref: aboutRef },
+            { label: 'Sobre mim', isVisible: isAboutVisible, ref: aboutRef },
             {
-              label: "Formação",
+              label: 'Formação',
               isVisible: isAcamidecInfoVisible,
               ref: academicInfoRef,
             },
             {
-              label: "Conhecimentos",
+              label: 'Conhecimentos',
               isVisible: isSkillsVisible,
               ref: skillsRef,
             },
             {
-              label: "Experiência",
+              label: 'Experiência',
               isVisible: isExperienceVisible,
               ref: experienceRef,
             },
             {
-              label: "Projetos",
+              label: 'Projetos',
               isVisible: isProjectsVisible,
               ref: projectsRef,
             },
-            { label: "Contato", isVisible: isContactVisible, ref: contactRef },
+            { label: 'Contato', isVisible: isContactVisible, ref: contactRef },
           ]}
         />
         <NameSection />
@@ -106,7 +92,7 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
+          Powered by{' '}
           <span>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
@@ -114,7 +100,7 @@ const Home: NextPage = () => {
       </footer>
       <GlobalStyle />
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

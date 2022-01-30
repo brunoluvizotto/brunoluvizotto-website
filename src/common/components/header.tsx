@@ -1,5 +1,5 @@
-import React, { FC, RefObject, useEffect, useState } from "react";
-import styled, { createGlobalStyle } from "styled-components";
+import React, { FC, RefObject, useEffect, useState } from 'react'
+import styled, { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -10,11 +10,11 @@ const GlobalStyle = createGlobalStyle`
   html {
     scroll-behavior: smooth;
   }
-`;
+`
 
 type WrapperProps = {
-  isOnTop: boolean;
-};
+  isOnTop: boolean
+}
 
 const Wrapper = styled.header<WrapperProps>`
   width: 100%;
@@ -25,31 +25,31 @@ const Wrapper = styled.header<WrapperProps>`
   text-align: center;
   z-index: 1;
   transition-duration: 0.4s;
-  ${(props) =>
+  ${props =>
     props.isOnTop &&
     `
       color: #FFFFFF80;
       background-color: transparent;
     `};
-`;
+`
 
 const UnorderedList = styled.ul`
   height: 50px;
   display: inline-flex;
   align-items: center;
-  gap: 40px;
+  gap: 50px;
   list-style: none;
-`;
+`
 
 type ListItemProps = {
-  isVisible: boolean;
-};
+  isVisible: boolean
+}
 
 const ListItem = styled.li<ListItemProps>`
   cursor: pointer;
   position: relative;
   &:after {
-    content: " ";
+    content: ' ';
     width: 0;
     height: 3px;
     background-color: #f44336;
@@ -65,7 +65,7 @@ const ListItem = styled.li<ListItemProps>`
   &:hover {
     color: #ff0000a0;
   }
-  ${(props) =>
+  ${props =>
     props.isVisible &&
     `
       color: #ff0000a0;
@@ -74,51 +74,31 @@ const ListItem = styled.li<ListItemProps>`
         left: -15%;
       }
     `};
-`;
-
-/*
-.bottom-animated:after {
-  width: 0;
-  height: 3px;
-  content: " ";
-  background-color: #F44336;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-}
-.bottom-animated:after {
-  top: 100%;
-}
-*/
+`
 
 type MenuElement = {
-  label: string;
-  isVisible: boolean;
-  ref: RefObject<HTMLElement>;
-};
+  label: string
+  isVisible: boolean
+  ref: RefObject<HTMLElement>
+}
 
 type Props = {
-  menuElements: MenuElement[];
-};
+  menuElements: MenuElement[]
+}
 
 export const Header: FC<Props> = ({ menuElements }) => {
-  const [isOnTop, setIsOnTop] = useState(true);
+  const [isOnTop, setIsOnTop] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsOnTop(window.scrollY === 0);
-    };
+      setIsOnTop(window.scrollY === 0)
+    }
 
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <>
@@ -127,11 +107,7 @@ export const Header: FC<Props> = ({ menuElements }) => {
         <nav>
           <UnorderedList>
             {menuElements.map(({ label, isVisible, ref }) => (
-              <ListItem
-                key={label}
-                isVisible={isVisible}
-                onClick={() => ref.current?.scrollIntoView()}
-              >
+              <ListItem key={label} isVisible={isVisible} onClick={() => ref.current?.scrollIntoView()}>
                 {label}
               </ListItem>
             ))}
@@ -139,5 +115,5 @@ export const Header: FC<Props> = ({ menuElements }) => {
         </nav>
       </Wrapper>
     </>
-  );
-};
+  )
+}
