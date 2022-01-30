@@ -5,7 +5,7 @@ type SectionProps = {
   imageOffset: number
 }
 
-const Section = styled.section.attrs(({ imageOffset }) => ({
+const Section = styled.section.attrs(({ imageOffset }: SectionProps) => ({
   style: {
     backgroundPosition: `50% ${imageOffset}%`,
   },
@@ -31,12 +31,9 @@ const Profession = styled.p`
   font-size: 40px;
 `
 
-type Props = {
-  horizontalOffset?: number
-  horizontalPositionFactor?: number
-}
-
-export const NameSection: FC<Props> = ({ horizontalOffset = 20, horizontalPositionFactor = 0.035 }) => {
+export const NameSection: FC = () => {
+  const horizontalOffset = 20
+  const horizontalPositionFactor = 0.035
   const [imageOffset, setImageOffset] = useState(50)
   const ref = useRef<HTMLElement>(null)
 
@@ -59,7 +56,7 @@ export const NameSection: FC<Props> = ({ horizontalOffset = 20, horizontalPositi
   })
 
   return (
-    <Section imageOffset={imageOffset}>
+    <Section imageOffset={imageOffset} ref={ref}>
       <Name>Bruno Luvizotto</Name>
       <Profession>Engenheiro de Software</Profession>
     </Section>
