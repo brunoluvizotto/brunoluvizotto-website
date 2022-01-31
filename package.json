@@ -1,12 +1,15 @@
 {
-  "name": "brunoluvizotto-v2",
+  "name": "brunoluvizotto",
   "private": true,
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "create-env": "printenv > .env",
+    "lint": "eslint src/ --ext .js --ext .jsx --ext .ts --ext .tsx",
+    "lint:fix": "yarn lint --fix",
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "gcp-build": "next build",
+    "build": "next build && next export",
+    "start": "next start"
   },
   "dependencies": {
     "next": "12.0.8",
