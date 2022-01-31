@@ -6,10 +6,18 @@ import { LocalizationContext } from '../common/contexts/localization-context'
 const ContentWrapper = styled.div`
   width: 65%;
   margin: 0 auto;
+
+  @media only screen and (max-width: 500px) {
+    width: 90%;
+  }
 `
 
 const Text = styled.p`
   font-size: 30px;
+
+  @media only screen and (max-width: 500px) {
+    font-size: 24px;
+  }
 `
 
 export const ContactSection = forwardRef<HTMLElement>((_props, ref) => {

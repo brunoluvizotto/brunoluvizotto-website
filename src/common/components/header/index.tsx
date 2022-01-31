@@ -1,6 +1,7 @@
 import React, { FC, RefObject, useEffect, useState } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import { LanguageSelector } from './language-selector'
+import { MobileMenu } from './mobile-menu'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -13,11 +14,11 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-type WrapperProps = {
+type WrapperDesktopProps = {
   isOnTop: boolean
 }
 
-const Wrapper = styled.header<WrapperProps>`
+const WrapperDesktop = styled.header<WrapperDesktopProps>`
   width: 100%;
   position: fixed;
   top: 0;
@@ -32,6 +33,10 @@ const Wrapper = styled.header<WrapperProps>`
       color: #FFFFFF80;
       background-color: transparent;
     `};
+
+  @media only screen and (max-width: 870px) {
+    display: none;
+  }
 `
 
 const UnorderedList = styled.ul`
@@ -42,11 +47,11 @@ const UnorderedList = styled.ul`
   list-style: none;
 `
 
-type ListItemProps = {
+type MenuItemProps = {
   isVisible: boolean
 }
 
-const ListItem = styled.li<ListItemProps>`
+const DesktopMenuItem = styled.li<MenuItemProps>`
   cursor: pointer;
   position: relative;
   &:after {
@@ -83,6 +88,29 @@ const LanguageSelectorWrapper = styled.div`
   right: 36px;
 `
 
+const MobileMenuList = styled.ul`
+  height: 50px;
+  list-style: none;
+  margin-top: 20px;
+`
+
+const MobileMenuItems = styled.li<MenuItemProps>`
+  font-size: 26px;
+  color: #ffffff80;
+  cursor: pointer;
+  padding: 18px 0 22px 50px;
+  border-bottom: 2px solid #ffffff10;
+  ${props =>
+    props.isVisible &&
+    `
+      color: #ff0000a0;
+      &:after {
+        width: 130%;
+        left: -15%;
+      }
+    `};
+`
+
 type MenuElement = {
   label: string
   isVisible: boolean
@@ -95,6 +123,7 @@ type Props = {
 
 export const Header: FC<Props> = ({ menuElements }) => {
   const [isOnTop, setIsOnTop] = useState(true)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -110,20 +139,46 @@ export const Header: FC<Props> = ({ menuElements }) => {
   return (
     <>
       <GlobalStyle />
-      <Wrapper isOnTop={isOnTop}>
+      <WrapperDesktop isOnTop={isOnTop}>
         <nav>
           <UnorderedList>
             {menuElements.map(({ label, isVisible, ref }) => (
-              <ListItem key={label} isVisible={isVisible} onClick={() => ref.current?.scrollIntoView()}>
+              <DesktopMenuItem
+                key={label}
+                isVisible={isVisible}
+                onClick={() => ref.current?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 {label}
-              </ListItem>
+              </DesktopMenuItem>
             ))}
           </UnorderedList>
         </nav>
         <LanguageSelectorWrapper>
           <LanguageSelector />
         </LanguageSelectorWrapper>
-      </Wrapper>
+      </WrapperDesktop>
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        setOpen={() => setIsMobileMenuOpen(true)}
+        setClosed={() => setIsMobileMenuOpen(false)}
+      >
+        <nav>
+          <MobileMenuList>
+            {menuElements.map(({ label, isVisible, ref }) => (
+              <MobileMenuItems
+                key={label}
+                isVisible={isVisible}
+                onClick={() => {
+                  ref.current?.scrollIntoView({ behavior: 'smooth' })
+                  setIsMobileMenuOpen(false)
+                }}
+              >
+                {label}
+              </MobileMenuItems>
+            ))}
+          </MobileMenuList>
+        </nav>
+      </MobileMenu>
     </>
   )
 }
