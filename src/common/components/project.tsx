@@ -15,9 +15,13 @@ const Description = styled.h3`
   margin-bottom: 40px;
 `
 
-const ImageContainer = styled.div`
-  height: 394px;
-  width: 700px;
+type ImageContainerProps = {
+  height: string
+  width: string
+}
+const ImageContainer = styled.div<ImageContainerProps>`
+  height: ${props => props.height};
+  width: ${props => props.width};
   margin: 0 auto 80px auto;
 `
 
@@ -26,15 +30,11 @@ export enum MediaType {
   IMAGE = 'image',
 }
 
-export enum MediaOrientation {
-  PORTRAIT = 'portrait',
-  LANDSCAPE = 'landscape',
-}
-
 type Media = {
   type: MediaType
   src: string
-  orientation: MediaOrientation
+  width: string
+  height: string
 }
 
 type Props = {
@@ -52,22 +52,17 @@ export const Project: FC<Props> = ({ name, description, media }) => {
       {media &&
         (media.type === MediaType.VIDEO ? (
           <iframe
-            height={media.orientation === MediaOrientation.PORTRAIT ? 700 : 394}
-            width={media.orientation === MediaOrientation.PORTRAIT ? 394 : 700}
             src={media.src}
+            height={media.height}
+            width={media.width}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope;
             picture-in-picture"
             allowFullScreen
           />
         ) : (
-          <ImageContainer>
-            <Image
-              src={media.src}
-              height={media.orientation === MediaOrientation.PORTRAIT ? 700 : 394}
-              width={media.orientation === MediaOrientation.PORTRAIT ? 394 : 700}
-              layout="fixed"
-            />
+          <ImageContainer height={media.height} width={media.width}>
+            <Image src={media.src} height={media.height} width={media.width} layout="fixed" />
           </ImageContainer>
         ))}
     </>
