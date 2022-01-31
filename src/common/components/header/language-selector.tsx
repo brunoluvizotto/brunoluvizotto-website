@@ -30,8 +30,9 @@ export const LanguageSelector: FC = () => {
   const flags = getFlags(language)
 
   const handleClick = (isClickable: boolean, newLanguage: Language) => () => {
-    if (isClickable) {
+    if (isClickable && isVisible) {
       setLanguage(newLanguage)
+      setIsVisible(false)
     }
   }
 
@@ -41,6 +42,7 @@ export const LanguageSelector: FC = () => {
         const isClickable = index > 0
         return (
           <ImageContainer
+            key={flag.language + index}
             isVisible={index === 0 ? true : isVisible}
             onMouseEnter={() => index === 0 && setIsVisible(true)}
           >

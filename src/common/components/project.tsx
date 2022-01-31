@@ -15,14 +15,25 @@ const Description = styled.h3`
   margin-bottom: 40px;
 `
 
-type ImageContainerProps = {
-  height: string
-  width: string
-}
-const ImageContainer = styled.div<ImageContainerProps>`
-  height: ${props => props.height};
-  width: ${props => props.width};
+const MediaContainer = styled.div`
+  height: 394px;
+  width: 700px;
   margin: 0 auto 80px auto;
+
+  @media only screen and (max-width: 1340px) {
+    height: 281px;
+    width: 500px;
+  }
+
+  @media only screen and (max-width: 820px) {
+    height: 197px;
+    width: 350px;
+  }
+
+  @media only screen and (max-width: 590px) {
+    height: 140px;
+    width: 250px;
+  }
 `
 
 export enum MediaType {
@@ -33,8 +44,6 @@ export enum MediaType {
 type Media = {
   type: MediaType
   src: string
-  width: string
-  height: string
 }
 
 type Props = {
@@ -51,19 +60,21 @@ export const Project: FC<Props> = ({ name, description, media }) => {
 
       {media &&
         (media.type === MediaType.VIDEO ? (
-          <iframe
-            src={media.src}
-            height={media.height}
-            width={media.width}
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope;
+          <MediaContainer>
+            <iframe
+              src={media.src}
+              height="100%"
+              width="100%"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope;
             picture-in-picture"
-            allowFullScreen
-          />
+              allowFullScreen
+            />
+          </MediaContainer>
         ) : (
-          <ImageContainer height={media.height} width={media.width}>
-            <Image src={media.src} height={media.height} width={media.width} layout="fixed" />
-          </ImageContainer>
+          <MediaContainer>
+            <Image src={media.src} height="394" width="700" layout="responsive" />
+          </MediaContainer>
         ))}
     </>
   )

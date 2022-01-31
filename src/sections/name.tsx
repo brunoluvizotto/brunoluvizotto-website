@@ -31,6 +31,7 @@ const Name = styled.p`
 const Profession = styled.p`
   color: #ffffff99;
   font-size: 40px;
+  text-align: center;
 `
 
 export const NameSection: FC = () => {
