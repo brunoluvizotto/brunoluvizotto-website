@@ -7,6 +7,10 @@ import { LocalizationContext } from '../common/contexts/localization-context'
 const ContentWrapper = styled.div`
   width: 65%;
   margin: 0 auto;
+
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+  }
 `
 
 export const PersonalProjectsSection = forwardRef<HTMLElement>((_props, ref) => {

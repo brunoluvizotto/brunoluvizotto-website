@@ -25,6 +25,7 @@ const Section = styled.section.attrs(({ imageOffset }: SectionProps) => ({
 const Name = styled.p`
   color: white;
   font-size: 60px;
+  text-align: center;
 `
 
 const Profession = styled.p`
