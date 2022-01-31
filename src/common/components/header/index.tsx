@@ -1,5 +1,6 @@
 import React, { FC, RefObject, useEffect, useState } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
+import { LanguageSelector } from './language-selector'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -76,6 +77,12 @@ const ListItem = styled.li<ListItemProps>`
     `};
 `
 
+const LanguageSelectorWrapper = styled.div`
+  position: absolute;
+  top: 12px;
+  right: 12px;
+`
+
 type MenuElement = {
   label: string
   isVisible: boolean
@@ -113,6 +120,9 @@ export const Header: FC<Props> = ({ menuElements }) => {
             ))}
           </UnorderedList>
         </nav>
+        <LanguageSelectorWrapper>
+          <LanguageSelector />
+        </LanguageSelectorWrapper>
       </Wrapper>
     </>
   )
