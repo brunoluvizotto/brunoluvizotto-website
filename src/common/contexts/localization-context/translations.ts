@@ -79,6 +79,15 @@ export const translations: TranslationsObject = {
     bnlSkill3: 'Processamento distr. de dados',
 
     personalProjects: 'Projetos Pessoais',
+    gotOnFloppy: 'Game of Thrones nos Disquetes',
+    gotOnFloppyDescription:
+      'Abertura de Game of Thrones tocada com a vibração dos motores de passo dos drivers de disquete.',
+    battleCity: 'Battle City 1985 em Qt (C++ / QML)',
+    battleCityDescription: 'Implementação do jogo "Battle City 1985" em Qt (C++ / Qml).',
+    priWebsite: 'https://www.priscillaluvizotto.com.br',
+    priWebsiteDescription: 'Website da Priscilla Luvizotto (dermatologista)',
+    luvimedical: 'Luvimedical',
+    luvimedicalDescription: 'Sistema web de gerenciamento de clínicas médicas',
   },
   [Language.EN_US]: {
     aboutMe: 'About me',
@@ -153,5 +162,14 @@ export const translations: TranslationsObject = {
     bnlSkill3: 'Distributed data processing',
 
     personalProjects: 'Personal Projects',
+    gotOnFloppy: 'Game of Thrones on Floppy',
+    gotOnFloppyDescription:
+      'Game of Thrones opening song played with the vibration of stepper motors in floppy drives.',
+    battleCity: 'Battle City 1985 written in Qt (C++ / QML)',
+    battleCityDescription: 'Implementation of the game "Battle City 1985" written in Qt (C++ / Qml).',
+    priWebsite: 'https://www.priscillaluvizotto.com.br',
+    priWebsiteDescription: "Priscilla Luvizotto's website (dermatologist)",
+    luvimedical: 'Luvimedical',
+    luvimedicalDescription: 'Medical clinic management software',
   },
 }

@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
 import { useContext } from 'react'
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import { Header } from '../common/components/header'
 import { LocalizationContext } from '../common/contexts/localization-context'
 import { useIsVisible } from '../common/hooks/use-is-visible'
@@ -23,6 +22,13 @@ const GlobalStyle = createGlobalStyle`
   html {
     scroll-behavior: smooth;
   }
+`
+
+const Footer = styled.footer`
+  padding: 6px 0;
+  color: #9a9191;
+  background-color: #e5e5e1;
+  text-align: center;
 `
 
 const Home: NextPage = () => {
@@ -83,18 +89,9 @@ const Home: NextPage = () => {
         <ContactSection ref={contactRef} />
       </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <Footer className="footer">
+        <p>Copyright © Luvitronics - Todos os direitos reservados - {new Date().getFullYear()}</p>
+      </Footer>
       <GlobalStyle />
     </>
   )
