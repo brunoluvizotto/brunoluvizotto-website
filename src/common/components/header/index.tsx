@@ -80,7 +80,7 @@ const ListItem = styled.li<ListItemProps>`
 const LanguageSelectorWrapper = styled.div`
   position: absolute;
   top: 12px;
-  right: 12px;
+  right: 36px;
 `
 
 type MenuElement = {
