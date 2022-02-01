@@ -12,8 +12,10 @@ const ContentWrapper = styled.div`
   }
 `
 
-const Text = styled.p`
+const Text = styled.a`
   font-size: 30px;
+  color: white;
+  text-decoration: none;
 
   @media only screen and (max-width: 500px) {
     font-size: 24px;
@@ -26,7 +28,7 @@ export const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
   return (
     <Section title={localization('contact')} color="white" backgroundColor="#222222" ref={ref}>
       <ContentWrapper>
-        <Text>brunoluvizotto@gmail.com</Text>
+        <Text href="mailto:brunoluvizotto@gmail.com">brunoluvizotto@gmail.com</Text>
       </ContentWrapper>
     </Section>
   )
