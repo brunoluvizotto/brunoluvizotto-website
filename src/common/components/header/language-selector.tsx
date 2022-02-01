@@ -4,17 +4,21 @@ import styled from 'styled-components'
 import { LocalizationContext } from '../../contexts/localization-context'
 import { Language } from '../../contexts/localization-context/translations'
 
-const Wrapper = styled.div`
+type ImageContainerProps = {
+  isVisible: boolean
+}
+
+const Wrapper = styled.div<ImageContainerProps>`
   display: inline-flex;
   flex-direction: column;
   gap: 12px;
   align-items: center;
   justify-content: center;
+  padding: 4px;
+  background-color: ${props => (props.isVisible ? 'white' : 'transparent')};
+  transition: 0.4s;
+  box-shadow: ${props => (props.isVisible ? '0px 1px 8px -2px' : '')};
 `
-
-type ImageContainerProps = {
-  isVisible: boolean
-}
 
 const ImageContainer = styled.div<ImageContainerProps>`
   height: 25px;
@@ -37,7 +41,7 @@ export const LanguageSelector: FC = () => {
   }
 
   return (
-    <Wrapper onMouseLeave={() => setIsVisible(false)}>
+    <Wrapper isVisible={isVisible} onMouseLeave={() => setIsVisible(false)}>
       {flags.map((flag, index) => {
         const isClickable = index > 0
         return (

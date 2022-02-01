@@ -84,8 +84,8 @@ const DesktopMenuItem = styled.li<MenuItemProps>`
 
 const LanguageSelectorWrapper = styled.div`
   position: absolute;
-  top: 12px;
-  right: 36px;
+  top: 8px;
+  right: 32px;
 `
 
 const MobileMenuList = styled.ul`
