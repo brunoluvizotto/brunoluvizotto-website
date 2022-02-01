@@ -44,7 +44,7 @@ export const PersonalProjectsSection = forwardRef<HTMLElement>((_props, ref) => 
           description={localization('priWebsiteDescription')}
           media={{
             type: MediaType.IMAGE,
-            src: '/images/priscilla-luvizotto.webp',
+            src: 'https://storage.googleapis.com/brunoluvizotto-public/images/priscilla-luvizotto.webp',
           }}
         />
         <Project

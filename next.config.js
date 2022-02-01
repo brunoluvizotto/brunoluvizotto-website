@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     loader: 'akamai',
     path: '',
+    domains: ['storage.googleapis.com']
   }
 }
 

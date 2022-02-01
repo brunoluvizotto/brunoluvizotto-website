@@ -17,7 +17,7 @@ const Section = styled.section.attrs(({ imageOffset }: SectionProps) => ({
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('/images/coding-background.webp');
+  background-image: url('https://storage.googleapis.com/brunoluvizotto-public/images/coding-background.webp');
   background-repeat: no-repeat;
   background-size: cover;
 `

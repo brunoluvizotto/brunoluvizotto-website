@@ -34,7 +34,7 @@ export const AboutMeSection = forwardRef<HTMLElement>((_props, ref) => {
       <ContentWrapper>
         <PictureContainer>
           <Image
-            src="/images/bruno.webp"
+            src="https://storage.googleapis.com/brunoluvizotto-public/images/bruno.webp"
             height={320}
             width={320}
             layout="fixed"

@@ -64,7 +64,7 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
           <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={0}>
             <LogoContainer>
               <Image
-                src="/images/unicamp.webp"
+                src="https://storage.googleapis.com/brunoluvizotto-public/images/unicamp.webp"
                 height={120}
                 width={120}
                 layout="fixed"
@@ -75,7 +75,7 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
           <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={100}>
             <LogoContainer>
               <Image
-                src="/images/inpg.webp"
+                src="https://storage.googleapis.com/brunoluvizotto-public/images/inpg.webp"
                 height={120}
                 width={120}
                 layout="fixed"
@@ -86,7 +86,7 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
           <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={200}>
             <LogoContainer>
               <Image
-                src="/images/tera.webp"
+                src="https://storage.googleapis.com/brunoluvizotto-public/images/tera.webp"
                 height={120}
                 width={120}
                 layout="fixed"
@@ -97,7 +97,7 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
           <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={300}>
             <LogoContainer>
               <Image
-                src="/images/embedded.webp"
+                src="https://storage.googleapis.com/brunoluvizotto-public/images/embedded.webp"
                 height={120}
                 width={120}
                 layout="fixed"

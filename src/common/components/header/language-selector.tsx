@@ -61,8 +61,14 @@ export const LanguageSelector: FC = () => {
 }
 
 function getFlags(currentLanguage: Language) {
-  const brazilianFlag = { language: Language.PT_BR, imgSrc: '/images/brazilian-flag.webp' }
-  const americanFlag = { language: Language.EN_US, imgSrc: '/images/american-flag.webp' }
+  const brazilianFlag = {
+    language: Language.PT_BR,
+    imgSrc: 'https://storage.googleapis.com/brunoluvizotto-public/images/brazilian-flag.webp',
+  }
+  const americanFlag = {
+    language: Language.EN_US,
+    imgSrc: 'https://storage.googleapis.com/brunoluvizotto-public/images/american-flag.webp',
+  }
 
   if (currentLanguage === Language.PT_BR) {
     return [brazilianFlag, americanFlag]

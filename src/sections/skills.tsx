@@ -37,7 +37,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => {
           <SkillCard
             title={localization('programming')}
             subTitle={localization('programmingSubtitle')}
-            imgSrc="/images/c-coding.webp"
+            imgSrc="https://storage.googleapis.com/brunoluvizotto-public/images/c-coding.webp"
             altText={localization('programmingThumbnailAltText')}
             description={localization('programmingDescription')}
           />
@@ -46,7 +46,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => {
           <SkillCard
             title={localization('projects')}
             subTitle={localization('projectsSubtitle')}
-            imgSrc="/images/scrum.webp"
+            imgSrc="https://storage.googleapis.com/brunoluvizotto-public/images/scrum.webp"
             altText={localization('projectsThumbnailAltText')}
             description={localization('projectsDescription')}
           />
@@ -55,7 +55,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => {
           <SkillCard
             title={localization('uiFrontend')}
             subTitle={localization('uiFrontendSubtitle')}
-            imgSrc="/images/ui-front.webp"
+            imgSrc="https://storage.googleapis.com/brunoluvizotto-public/images/ui-front.webp"
             altText={localization('uiFrontendThumbnailAltText')}
             description={localization('uiFrontendDescription')}
           />
@@ -64,7 +64,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => {
           <SkillCard
             title={localization('versioning')}
             subTitle={localization('versioningSubtitle')}
-            imgSrc="/images/git.webp"
+            imgSrc="https://storage.googleapis.com/brunoluvizotto-public/images/git.webp"
             altText={localization('versioningThumbnailAltText')}
             description={localization('versioningDescription')}
           />
@@ -73,7 +73,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => {
           <SkillCard
             title={localization('iot')}
             subTitle={localization('iotSubtitle')}
-            imgSrc="/images/iot.webp"
+            imgSrc="https://storage.googleapis.com/brunoluvizotto-public/images/iot.webp"
             altText={localization('iotThumbnailAltText')}
             description={localization('iotDescription')}
           />
@@ -82,7 +82,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => {
           <SkillCard
             title={localization('personalSkills')}
             subTitle={localization('personalSkillsSubtitle')}
-            imgSrc="/images/english-speaking.webp"
+            imgSrc="https://storage.googleapis.com/brunoluvizotto-public/images/english-speaking.webp"
             altText={localization('personalSkillsThumbnailAltText')}
             description={localization('personalSkillsDescription')}
           />

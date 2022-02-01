@@ -39,7 +39,7 @@ export const ExperienceSection = forwardRef<HTMLElement>((_props, ref) => {
             title="Liv Up"
             subTitle={localization('livupJobTitle')}
             date={localization('livupJobDate')}
-            imgSrc="/images/livup.webp"
+            imgSrc="https://storage.googleapis.com/brunoluvizotto-public/images/livup.webp"
             skills={[localization('livupSkill1'), localization('livupSkill2'), localization('livupSkill3')]}
           />
         </FadeIn>
@@ -48,7 +48,7 @@ export const ExperienceSection = forwardRef<HTMLElement>((_props, ref) => {
             title="Omnilink"
             subTitle={localization('omnilinkJobTitle')}
             date={localization('omnilinkJobDate')}
-            imgSrc="/images/omnilink.webp"
+            imgSrc="https://storage.googleapis.com/brunoluvizotto-public/images/omnilink.webp"
             skills={[localization('omnilinkSkill1'), localization('omnilinkSkill2'), localization('omnilinkSkill3')]}
           />
         </FadeIn>
@@ -57,7 +57,7 @@ export const ExperienceSection = forwardRef<HTMLElement>((_props, ref) => {
             title={localization('bnlCompanyName')}
             subTitle={localization('bnlJobTitle')}
             date={localization('bnlJobDate')}
-            imgSrc="/images/bnl.webp"
+            imgSrc="https://storage.googleapis.com/brunoluvizotto-public/images/bnl.webp"
             skills={[localization('bnlSkill1'), localization('bnlSkill2'), localization('bnlSkill3')]}
           />
         </FadeIn>
