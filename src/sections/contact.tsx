@@ -8,6 +8,7 @@ const ContentWrapper = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 
   @media only screen and (max-width: 430px) {
@@ -16,25 +17,33 @@ const ContentWrapper = styled.div`
   }
 `
 
-const Text = styled.a`
-  font-size: 30px;
-  color: white;
-  text-decoration: none;
-
-  @media only screen and (max-width: 500px) {
-    font-size: 24px;
-  }
-`
-
 const InfoContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
   justify-content: center;
+  cursor: pointer;
 
   @media only screen and (max-width: 430px) {
     flex-direction: column;
     gap: 5px;
+  }
+
+  a {
+    font-size: 30px;
+    color: #ffffffaa;
+    text-decoration: none;
+    transition-duration: 0.3s;
+
+    @media only screen and (max-width: 500px) {
+      font-size: 24px;
+    }
+  }
+
+  &:hover {
+    a {
+      color: white;
+    }
   }
 `
 
@@ -63,11 +72,11 @@ export const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
       <ContentWrapper>
         <InfoContainer>
           <Icon height={30} width={30} backgroundSize="180px 90px" positionX={-60} positionY={-30} />
-          <Text href="mailto:brunoluvizotto@gmail.com">brunoluvizotto@gmail.com</Text>
+          <a href="mailto:brunoluvizotto@gmail.com">brunoluvizotto@gmail.com</a>
         </InfoContainer>
         <InfoContainer>
           <Icon height={30} width={30} backgroundSize="180px 90px" positionX={-150} positionY={-30} />
-          <Text href="https://www.linkedin.com/in/bruno-valdrighi-luvizotto/">Bruno Valdrighi Luvizotto</Text>
+          <a href="https://www.linkedin.com/in/bruno-valdrighi-luvizotto/">Bruno Valdrighi Luvizotto</a>
         </InfoContainer>
       </ContentWrapper>
     </Section>
