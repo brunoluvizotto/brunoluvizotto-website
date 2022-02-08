@@ -25,7 +25,7 @@ const ImageContainer = styled.div<ImageContainerProps>`
   height: 25px;
   width: 40px;
   opacity: ${props => (props.isVisible ? 1 : 0)};
-  cursor: ${props => (props.isClickable ? 'pointer' : 'default')};
+  cursor: ${props => (props.isClickable && props.isVisible ? 'pointer' : 'default')};
   transition: 0.4s;
 `
 
