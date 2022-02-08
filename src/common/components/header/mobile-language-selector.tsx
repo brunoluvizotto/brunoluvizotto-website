@@ -11,6 +11,7 @@ const Select = styled.select`
   height: 100%;
   color: #ffffff80;
   background-color: #373a47;
+  font-size: 20px;
 `
 
 export const MobileLanguageSelector: FC = () => {
@@ -25,8 +26,8 @@ export const MobileLanguageSelector: FC = () => {
     <Wrapper>
       <Select onChange={handleOnChange}>
         {flags.map(flag => (
-          <option key={flag.language} label={flag.translatedLanguage}>
-            {flag.language}
+          <option key={flag.language} label={flag.translatedLanguage} value={flag.language}>
+            {flag.translatedLanguage}
           </option>
         ))}
       </Select>
@@ -37,11 +38,11 @@ export const MobileLanguageSelector: FC = () => {
 function getFlags(currentLanguage: Language) {
   const brazilianFlag = {
     language: Language.PT_BR,
-    translatedLanguage: '🇧🇷 Português (Brasil)',
+    translatedLanguage: '🇧🇷 Português',
   }
   const americanFlag = {
     language: Language.EN_US,
-    translatedLanguage: '🇺🇸 English (USA)',
+    translatedLanguage: '🇺🇸 English',
   }
 
   if (currentLanguage === Language.PT_BR) {
