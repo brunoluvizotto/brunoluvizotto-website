@@ -6,6 +6,7 @@ import { Language } from '../../contexts/localization-context/translations'
 
 type ImageContainerProps = {
   isVisible: boolean
+  isClickable?: boolean
 }
 
 const Wrapper = styled.div<ImageContainerProps>`
@@ -24,6 +25,7 @@ const ImageContainer = styled.div<ImageContainerProps>`
   height: 25px;
   width: 40px;
   opacity: ${props => (props.isVisible ? 1 : 0)};
+  cursor: ${props => (props.isClickable ? 'pointer' : 'default')};
   transition: 0.4s;
 `
 
@@ -48,6 +50,7 @@ export const LanguageSelector: FC = () => {
           <ImageContainer
             key={flag.language + index}
             isVisible={index === 0 ? true : isVisible}
+            isClickable={index > 0}
             onMouseEnter={() => index === 0 && setIsVisible(true)}
           >
             <Image

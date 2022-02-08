@@ -1,6 +1,7 @@
 import React, { FC, RefObject, useEffect, useState } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import { LanguageSelector } from './language-selector'
+import { MobileLanguageSelector } from './mobile-language-selector'
 import { MobileMenu } from './mobile-menu'
 
 const GlobalStyle = createGlobalStyle`
@@ -111,6 +112,10 @@ const MobileMenuItems = styled.li<MenuItemProps>`
     `};
 `
 
+const MobileLanguageSelectorWrapper = styled.div`
+  padding: 20px 50px;
+`
+
 type MenuElement = {
   label: string
   isVisible: boolean
@@ -162,8 +167,8 @@ export const Header: FC<Props> = ({ menuElements }) => {
         setOpen={() => setIsMobileMenuOpen(true)}
         setClosed={() => setIsMobileMenuOpen(false)}
       >
-        <nav>
-          <MobileMenuList>
+        <MobileMenuList>
+          <nav>
             {menuElements.map(({ label, isVisible, ref }) => (
               <MobileMenuItems
                 key={label}
@@ -176,8 +181,11 @@ export const Header: FC<Props> = ({ menuElements }) => {
                 {label}
               </MobileMenuItems>
             ))}
-          </MobileMenuList>
-        </nav>
+            <MobileLanguageSelectorWrapper>
+              <MobileLanguageSelector />
+            </MobileLanguageSelectorWrapper>
+          </nav>
+        </MobileMenuList>
       </MobileMenu>
     </>
   )
