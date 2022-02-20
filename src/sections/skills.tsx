@@ -33,7 +33,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => {
   return (
     <Section title={localization('skills')} color="black" backgroundColor="#F2F2F2" ref={ref}>
       <ContentWrapper>
-        <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delay={0}>
+        <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delayInMilliseconds={0}>
           <SkillCard
             title={localization('programming')}
             subTitle={localization('programmingSubtitle')}
@@ -42,7 +42,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => {
             description={localization('programmingDescription')}
           />
         </FadeIn>
-        <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delay={100}>
+        <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delayInMilliseconds={100}>
           <SkillCard
             title={localization('projects')}
             subTitle={localization('projectsSubtitle')}
@@ -51,7 +51,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => {
             description={localization('projectsDescription')}
           />
         </FadeIn>
-        <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delay={200}>
+        <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delayInMilliseconds={200}>
           <SkillCard
             title={localization('uiFrontend')}
             subTitle={localization('uiFrontendSubtitle')}
@@ -60,7 +60,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => {
             description={localization('uiFrontendDescription')}
           />
         </FadeIn>
-        <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delay={0}>
+        <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delayInMilliseconds={0}>
           <SkillCard
             title={localization('versioning')}
             subTitle={localization('versioningSubtitle')}
@@ -69,7 +69,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => {
             description={localization('versioningDescription')}
           />
         </FadeIn>
-        <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delay={100}>
+        <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delayInMilliseconds={100}>
           <SkillCard
             title={localization('iot')}
             subTitle={localization('iotSubtitle')}
@@ -78,7 +78,7 @@ export const SkillsSection = forwardRef<HTMLElement>((_props, ref) => {
             description={localization('iotDescription')}
           />
         </FadeIn>
-        <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delay={200}>
+        <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delayInMilliseconds={200}>
           <SkillCard
             title={localization('personalSkills')}
             subTitle={localization('personalSkillsSubtitle')}

@@ -62,7 +62,7 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
     <Section title={localization('education')} color="black" backgroundColor="white" ref={ref}>
       <ContentWrapper>
         <LogosWrapper>
-          <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delay={0}>
+          <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delayInMilliseconds={0}>
             <LogoContainer>
               <Image
                 src="https://storage.googleapis.com/brunoluvizotto-public/images/unicamp.webp"
@@ -73,7 +73,7 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
               />
             </LogoContainer>
           </FadeIn>
-          <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delay={100}>
+          <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delayInMilliseconds={100}>
             <LogoContainer>
               <Image
                 src="https://storage.googleapis.com/brunoluvizotto-public/images/inpg.webp"
@@ -84,7 +84,7 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
               />
             </LogoContainer>
           </FadeIn>
-          <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delay={200}>
+          <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delayInMilliseconds={200}>
             <LogoContainer>
               <Image
                 src="https://storage.googleapis.com/brunoluvizotto-public/images/tera.webp"
@@ -95,7 +95,7 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
               />
             </LogoContainer>
           </FadeIn>
-          <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delay={300}>
+          <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delayInMilliseconds={300}>
             <LogoContainer>
               <Image
                 src="https://storage.googleapis.com/brunoluvizotto-public/images/embedded.webp"

@@ -6,16 +6,22 @@ type Props = {
   from: From
   positionOffset: number
   triggerOffset: number
-  delay?: number
+  delayInMilliseconds?: number
+  durationInMilliseconds?: number
 }
 
-export const FadeIn: FC<Props> = ({ from, positionOffset, triggerOffset, delay = 0, children }) => {
+const defaultProps = {
+  delayInMilliseconds: 0,
+  durationInMilliseconds: 1200,
+}
+
+export const FadeIn: FC<Props> = ({ triggerOffset, children, ...containerProps }) => {
   const [isVisible, isVisibleRef] = useIsVisible<HTMLDivElement>({
     offset: triggerOffset,
   })
 
   return (
-    <FadeDiv isVisible={isVisible} from={from} positionOffset={positionOffset} delay={delay} ref={isVisibleRef}>
+    <FadeDiv isVisible={isVisible} ref={isVisibleRef} {...defaultProps} {...containerProps}>
       {children}
     </FadeDiv>
   )
