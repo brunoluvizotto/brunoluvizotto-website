@@ -34,7 +34,7 @@ export const ExperienceSection = forwardRef<HTMLElement>((_props, ref) => {
   return (
     <Section title={localization('experiencesSectionTitle')} color="black" backgroundColor="white" ref={ref}>
       <ContentWrapper>
-        <FadeIn from="bottom" offsetPosition={400} offsetTrigger={300} delay={0}>
+        <FadeIn from="bottom" positionOffset={400} triggerOffset={300} delay={0}>
           <ExperienceCard
             title="Liv Up"
             subTitle={localization('livupJobTitle')}
@@ -43,7 +43,7 @@ export const ExperienceSection = forwardRef<HTMLElement>((_props, ref) => {
             skills={[localization('livupSkill1'), localization('livupSkill2'), localization('livupSkill3')]}
           />
         </FadeIn>
-        <FadeIn from="bottom" offsetPosition={400} offsetTrigger={300} delay={200}>
+        <FadeIn from="bottom" positionOffset={400} triggerOffset={300} delay={200}>
           <ExperienceCard
             title="Omnilink"
             subTitle={localization('omnilinkJobTitle')}
@@ -52,7 +52,7 @@ export const ExperienceSection = forwardRef<HTMLElement>((_props, ref) => {
             skills={[localization('omnilinkSkill1'), localization('omnilinkSkill2'), localization('omnilinkSkill3')]}
           />
         </FadeIn>
-        <FadeIn from="bottom" offsetPosition={400} offsetTrigger={300} delay={400}>
+        <FadeIn from="bottom" positionOffset={400} triggerOffset={300} delay={400}>
           <ExperienceCard
             title={localization('bnlCompanyName')}
             subTitle={localization('bnlJobTitle')}

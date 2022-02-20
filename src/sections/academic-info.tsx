@@ -49,6 +49,7 @@ const LogoContainer = styled.div`
 `
 
 const AcademicItem = styled.li`
+  overflow-x: hidden;
   list-style: none;
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -61,7 +62,7 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
     <Section title={localization('education')} color="black" backgroundColor="white" ref={ref}>
       <ContentWrapper>
         <LogosWrapper>
-          <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={0}>
+          <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delay={0}>
             <LogoContainer>
               <Image
                 src="https://storage.googleapis.com/brunoluvizotto-public/images/unicamp.webp"
@@ -72,7 +73,7 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
               />
             </LogoContainer>
           </FadeIn>
-          <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={100}>
+          <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delay={100}>
             <LogoContainer>
               <Image
                 src="https://storage.googleapis.com/brunoluvizotto-public/images/inpg.webp"
@@ -83,7 +84,7 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
               />
             </LogoContainer>
           </FadeIn>
-          <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={200}>
+          <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delay={200}>
             <LogoContainer>
               <Image
                 src="https://storage.googleapis.com/brunoluvizotto-public/images/tera.webp"
@@ -94,7 +95,7 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
               />
             </LogoContainer>
           </FadeIn>
-          <FadeIn from="bottom" offsetPosition={400} offsetTrigger={200} delay={300}>
+          <FadeIn from="bottom" positionOffset={400} triggerOffset={200} delay={300}>
             <LogoContainer>
               <Image
                 src="https://storage.googleapis.com/brunoluvizotto-public/images/embedded.webp"
@@ -108,22 +109,22 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
         </LogosWrapper>
         <ul>
           <AcademicItem>
-            <FadeIn from="left" offsetPosition={300} offsetTrigger={-100}>
+            <FadeIn from="left" positionOffset={300} triggerOffset={-100}>
               {localization('degree')}
             </FadeIn>
           </AcademicItem>
           <AcademicItem>
-            <FadeIn from="right" offsetPosition={300} offsetTrigger={-100}>
+            <FadeIn from="right" positionOffset={300} triggerOffset={-100}>
               {localization('businessPostGratuation')}
             </FadeIn>
           </AcademicItem>
           <AcademicItem>
-            <FadeIn from="left" offsetPosition={300} offsetTrigger={-100}>
+            <FadeIn from="left" positionOffset={300} triggerOffset={-100}>
               {localization('machineLearningBootcamp')}
             </FadeIn>
           </AcademicItem>
           <AcademicItem>
-            <FadeIn from="right" offsetPosition={300} offsetTrigger={-100}>
+            <FadeIn from="right" positionOffset={300} triggerOffset={-100}>
               {localization('linux')}
             </FadeIn>
           </AcademicItem>
