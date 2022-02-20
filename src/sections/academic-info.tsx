@@ -48,8 +48,14 @@ const LogoContainer = styled.div`
   width: 120px;
 `
 
-const AcademicItem = styled.li`
+const AcademicList = styled.ul`
+  width: 100vw;
   overflow-x: hidden;
+`
+
+const AcademicItem = styled.li`
+  width: 80vw;
+  margin: 0 auto;
   list-style: none;
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -107,7 +113,7 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
             </LogoContainer>
           </FadeIn>
         </LogosWrapper>
-        <ul>
+        <AcademicList>
           <AcademicItem>
             <FadeIn from="left" positionOffset={300} triggerOffset={-100}>
               {localization('degree')}
@@ -128,7 +134,7 @@ export const AcademicInfoSection = forwardRef<HTMLElement>((_props, ref) => {
               {localization('linux')}
             </FadeIn>
           </AcademicItem>
-        </ul>
+        </AcademicList>
       </ContentWrapper>
     </Section>
   )
