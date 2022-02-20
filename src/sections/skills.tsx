@@ -1,6 +1,6 @@
 import React, { forwardRef, useContext } from 'react'
+import { FadeIn } from 'react-slide-fade-in'
 import styled from 'styled-components'
-import { FadeIn } from '../common/components/fade-in'
 import { Section } from '../common/components/section'
 import { SkillCard } from '../common/components/skill-card'
 import { LocalizationContext } from '../common/contexts/localization-context'
