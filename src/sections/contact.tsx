@@ -76,7 +76,7 @@ export const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
         </InfoContainer>
         <InfoContainer>
           <Icon height={30} width={30} backgroundSize="180px 90px" positionX={-150} positionY={-30} />
-          <a href="https://www.linkedin.com/in/bruno-valdrighi-luvizotto/">Bruno Valdrighi Luvizotto</a>
+          <a href={localization('linkedinUrl')}>Bruno Valdrighi Luvizotto</a>
         </InfoContainer>
       </ContentWrapper>
     </Section>

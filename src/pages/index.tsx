@@ -90,7 +90,9 @@ const Home: NextPage = () => {
       </main>
 
       <Footer className="footer">
-        <p>Copyright © Luvitronics - Todos os direitos reservados - {new Date().getFullYear()}</p>
+        <p>
+          Copyright © Luvitronics - {localization('allRightsReserved')} - {new Date().getFullYear()}
+        </p>
       </Footer>
       <GlobalStyle />
     </>

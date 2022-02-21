@@ -88,6 +88,10 @@ export const translations: TranslationsObject = {
     priWebsiteDescription: 'Website da Priscilla Luvizotto (www.priscillaluvizotto.com.br)',
     luvimedical: 'Luvimedical',
     luvimedicalDescription: 'Sistema web de gerenciamento de clínicas médicas',
+
+    linkedinUrl: 'https://www.linkedin.com/in/bruno-valdrighi-luvizotto/',
+
+    allRightsReserved: 'Todos os direitos reservados',
   },
   [Language.EN_US]: {
     aboutMe: 'About me',
@@ -171,5 +175,9 @@ export const translations: TranslationsObject = {
     priWebsiteDescription: "Priscilla Luvizotto's website (www.priscillaluvizotto.com.br)",
     luvimedical: 'Luvimedical',
     luvimedicalDescription: 'Medical clinic management software',
+
+    linkedinUrl: 'https://www.linkedin.com/in/bruno-valdrighi-luvizotto/?locale=en_US',
+
+    allRightsReserved: 'All rights reserved',
   },
 }
