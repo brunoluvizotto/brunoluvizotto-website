@@ -1724,10 +1724,10 @@ react-refresh@0.8.3:
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
-react-slide-fade-in@^1.0.1:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-slide-fade-in/-/react-slide-fade-in-1.0.2.tgz#c49d95580b689ed1c8eae7d611c8de8e83902023"
-  integrity sha512-ZgfBSk/7uH1oOl5A4Fi9Z+0e5XfiZGedrwZDWpEvABUNp8fETmGA7Ci82YjxsqpeBaPYVXdMG+jiYXxj6hv1EQ==
+react-slide-fade-in@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-slide-fade-in/-/react-slide-fade-in-1.0.6.tgz#22c35813512689ba5033baef98e52fbd8693268c"
+  integrity sha512-wNpHMR5HsIe/JGCy38xBoc6MOJVillPY+RmmX8BQjCigzlJz/ifRL90dEAVO3CNi9Rnp9XiM1stOwMqdqEJLOg==
 
 react@17.0.2:
   version "17.0.2"
