@@ -79,13 +79,16 @@ export const translations: TranslationsObject = {
     bnlSkill3: 'Processamento distr. de dados',
 
     personalProjects: 'Projetos Pessoais',
+    reactSlideFadeIn: 'react-slide-fade-in',
+    reactSlideFadeInDescription:
+      'Pacote publicado no npmjs que adiciona um efeito de slide e fade in em componentes React',
     gotOnFloppy: 'Game of Thrones nos Disquetes',
     gotOnFloppyDescription:
       'Abertura de Game of Thrones tocada com a vibração dos motores de passo dos drivers de disquete.',
     battleCity: 'Battle City 1985 em Qt (C++ / QML)',
     battleCityDescription: 'Implementação do jogo "Battle City 1985" em Qt (C++ / Qml).',
-    priWebsite: 'Website Priscilla Luvizotto',
-    priWebsiteDescription: 'Website da Priscilla Luvizotto (www.priscillaluvizotto.com.br)',
+    priWebsite: 'Website da Priscilla Luvizotto',
+    priWebsiteDescription: 'Site profissional da dermatologista Priscilla Luvizotto',
     luvimedical: 'Luvimedical',
     luvimedicalDescription: 'Sistema web de gerenciamento de clínicas médicas',
 
@@ -104,7 +107,7 @@ export const translations: TranslationsObject = {
     jobTitle: 'Software Engineer',
 
     aboutMeText:
-      "My name is Bruno Luvizotto. I'm a software engineer - with a bachelor’s degree in electrical engineering from UNICAMP - who always tries to learn something new. I have experience in developing software in Javascript / Typescript (React, React-Native and Node), Python, C and C++ (Qt). I also have experience developing mobile apps.",
+      "My name is Bruno Luvizotto. I'm a software engineer - with a bachelor`s degree in electrical engineering from UNICAMP - who always tries to learn something new. I have experience in developing software in Javascript / Typescript (React, React-Native and Node), Python, C and C++ (Qt). I also have experience developing mobile apps.",
     profilePictureAlt: "Bruno's picture with a lighthouse in the back, in a rocky beach with a view of the sea",
     contactButton: 'Contact',
 
@@ -166,13 +169,15 @@ export const translations: TranslationsObject = {
     bnlSkill3: 'Distributed data processing',
 
     personalProjects: 'Personal Projects',
+    reactSlideFadeIn: 'react-slide-fade-in',
+    reactSlideFadeInDescription: 'Package published on npmjs that adds a slide fade in effect to React components',
     gotOnFloppy: 'Game of Thrones on Floppy',
     gotOnFloppyDescription:
       'Game of Thrones opening song played with the vibration of stepper motors in floppy drives.',
     battleCity: 'Battle City 1985 written in Qt (C++ / QML)',
     battleCityDescription: 'Implementation of the game "Battle City 1985" written in Qt (C++ / Qml).',
     priWebsite: "Priscilla Luvizotto's website",
-    priWebsiteDescription: "Priscilla Luvizotto's website (www.priscillaluvizotto.com.br)",
+    priWebsiteDescription: 'Professional website of the dermatologist Priscilla Luvizotto',
     luvimedical: 'Luvimedical',
     luvimedicalDescription: 'Medical clinic management software',
 

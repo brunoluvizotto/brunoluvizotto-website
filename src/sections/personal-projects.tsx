@@ -1,6 +1,7 @@
 import React, { forwardRef, useContext } from 'react'
 import styled from 'styled-components'
-import { MediaType, Project } from '../common/components/project'
+import { Project } from '../common/components/project'
+import { MediaType } from '../common/components/project/media-component'
 import { Section } from '../common/components/section'
 import { LocalizationContext } from '../common/contexts/localization-context'
 
@@ -24,6 +25,15 @@ export const PersonalProjectsSection = forwardRef<HTMLElement>((_props, ref) => 
     <Section title={localization('personalProjects')} color="black" backgroundColor="#F2F2F2" ref={ref}>
       <ContentWrapper>
         <Project
+          name={localization('reactSlideFadeIn')}
+          description={localization('reactSlideFadeInDescription')}
+          media={{
+            type: MediaType.IMAGE,
+            src: 'https://storage.googleapis.com/brunoluvizotto-public/images/react-slide-fade-in.webp',
+          }}
+          url="https://www.npmjs.com/package/react-slide-fade-in"
+        />
+        <Project
           name={localization('gotOnFloppy')}
           description={localization('gotOnFloppyDescription')}
           media={{
@@ -46,6 +56,7 @@ export const PersonalProjectsSection = forwardRef<HTMLElement>((_props, ref) => 
             type: MediaType.IMAGE,
             src: 'https://storage.googleapis.com/brunoluvizotto-public/images/priscilla-luvizotto.webp',
           }}
+          url="https://www.priscillaluvizotto.com.br"
         />
         <Project
           name={localization('luvimedical')}
