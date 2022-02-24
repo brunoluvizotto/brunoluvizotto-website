@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React, { FC } from 'react'
 import styled from 'styled-components'
+import { useIsVisible } from '../../hooks/use-is-visible'
 
 const MediaContainer = styled.div`
   height: 394px;
@@ -38,22 +39,26 @@ type Props = {
 }
 
 export const MediaComponent: FC<Props> = ({ media }) => {
+  const [isVisible, isVisibleRef] = useIsVisible<HTMLDivElement>({ offset: 400, persistent: true })
+
   if (!media) {
     return null
   }
 
   if (media.type === MediaType.VIDEO) {
     return (
-      <MediaContainer>
-        <iframe
-          src={media.src}
-          height="100%"
-          width="100%"
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      <MediaContainer ref={isVisibleRef}>
+        {isVisible && (
+          <iframe
+            src={media.src}
+            height="100%"
+            width="100%"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope;
         picture-in-picture"
-          allowFullScreen
-        />
+            allowFullScreen
+          />
+        )}
       </MediaContainer>
     )
   }
