@@ -1,4 +1,4 @@
-import React, { forwardRef, useContext } from 'react'
+import { forwardRef, useContext } from 'react'
 import { FadeIn } from 'react-slide-fade-in'
 import styled from 'styled-components'
 import { ExperienceCard } from '../common/components/experience-card'

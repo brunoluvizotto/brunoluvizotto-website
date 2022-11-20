@@ -40,20 +40,8 @@ const Title = styled.p`
 type Props = WrapperProps & {
   title: string
   ref: React.Ref<HTMLElement>
+  children?: React.ReactNode
 }
-
-// export const Section: FC<Props> = (props) => {
-//   const SectionElement = forwardRef<HTMLElement, Props>(
-//     ({ title, color, backgroundColor, children }, ref) => (
-//       <Wrapper color={color} backgroundColor={backgroundColor} ref={ref}>
-//         <Title>{title}</Title>
-//         {children}
-//       </Wrapper>
-//     )
-//   );
-
-//   return <SectionElement {...props} />;
-// };
 
 export const Section: FC<Props> = forwardRef<HTMLElement, Props>(({ title, color, backgroundColor, children }, ref) => (
   <Wrapper color={color} backgroundColor={backgroundColor} ref={ref}>

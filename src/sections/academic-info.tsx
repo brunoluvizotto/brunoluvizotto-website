@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, { forwardRef, useContext } from 'react'
+import { forwardRef, useContext } from 'react'
 import { FadeIn } from 'react-slide-fade-in'
 import styled from 'styled-components'
 import { Section } from '../common/components/section'
