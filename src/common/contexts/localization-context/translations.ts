@@ -64,7 +64,7 @@ export const translations: TranslationsObject = {
     leveregeCompanyName: 'Leverege (EUA)',
     leveregeJobTitle: 'Engenheiro de Software',
     leveregeJobDate: 'Desde 02/2022',
-    leveregeSkill1: 'Software Fullstackyy (JS/TS)',
+    leveregeSkill1: 'Software Fullstack (JS/TS)',
     leveregeSkill2: 'Computação em nuvem (GCP / AWS)',
     leveregeSkill3: 'Postgres, Firebase e ElasticSearch',
     livupJobTitle: 'Engenheiro de Software',
