@@ -61,8 +61,14 @@ export const translations: TranslationsObject = {
       'Além de saber e gostar de trabalhar em equipe, a boa comunicação é outra qualidade. Sou capaz de me expressar bem e me fazer entendido mesmo quando explico algo técnico a uma pessoa não-técnica. Além disso, após dois anos trabalhando nos EUA, também compreendo e me expresso com facilidade em inglês.',
 
     experiencesSectionTitle: 'Últimas Experiências Profissionais',
+    leveregeCompanyName: 'Leverege (EUA)',
+    leveregeJobTitle: 'Engenheiro de Software',
+    leveregeJobDate: 'Desde 02/2022',
+    leveregeSkill1: 'Software Fullstackyy (JS/TS)',
+    leveregeSkill2: 'Computação em nuvem (GCP / AWS)',
+    leveregeSkill3: 'Postgres, Firebase e ElasticSearch',
     livupJobTitle: 'Engenheiro de Software',
-    livupJobDate: 'Desde 10/2019',
+    livupJobDate: 'De 10/2019 a 02/2022',
     livupSkill1: 'Software (JS/TS, Python)',
     livupSkill2: 'Computação em nuvem (GCP / AWS)',
     livupSkill3: 'Dados: Mongo, Redis e Bigquery',
@@ -79,6 +85,11 @@ export const translations: TranslationsObject = {
     bnlSkill3: 'Processamento distr. de dados',
 
     personalProjects: 'Projetos Pessoais',
+    augustoNeto: 'Website do advogado Augusto Neto',
+    augustoNetoDescription: 'Site profissional do advogado Augusto Neto',
+    canaClipping: 'Cana Clipping',
+    canaClippingDescription:
+      'Website do projeto Cana Clipping - um clipping de notícias sobre o Setor Sucroenergético, Agronegócio, Inovação & Tecnologia e ESG',
     reactSlideFadeIn: 'react-slide-fade-in',
     reactSlideFadeInDescription:
       'Pacote publicado no npmjs que adiciona um efeito de slide e fade in em componentes React',
@@ -151,8 +162,14 @@ export const translations: TranslationsObject = {
       "Besides enjoying to work in team, good communication is another positive skill. I'm able to express myself well and to explain something technical to someone non-technical. Also, after two years working in the USA, I can communicate very well in English.",
 
     experiencesSectionTitle: 'Most Recent Work Experiences',
+    leveregeCompanyName: 'Leverege (USA)',
+    leveregeJobTitle: 'Software Engineer',
+    leveregeJobDate: 'Since 02/2022',
+    leveregeSkill1: 'Fullstack Software (JS/TS)',
+    leveregeSkill2: 'Cloud computing (GCP / AWS)',
+    leveregeSkill3: 'Postgres, Firebase and ElasticSearch',
     livupJobTitle: 'Software Engineer',
-    livupJobDate: 'Since 10/2019',
+    livupJobDate: 'From 10/2019 to 02/2022',
     livupSkill1: 'Software (JS/TS, Python)',
     livupSkill2: 'Cloud computing (GCP / AWS)',
     livupSkill3: 'Data: Mongo, Redis and Bigquery',
@@ -169,6 +186,11 @@ export const translations: TranslationsObject = {
     bnlSkill3: 'Distributed data processing',
 
     personalProjects: 'Personal Projects',
+    augustoNeto: "Augusto Neto's Website",
+    augustoNetoDescription: 'Professional website of the lawyer Augusto Neto',
+    canaClipping: 'Cana Clipping',
+    canaClippingDescription:
+      'Website of the Cana Clipping project - a news clipping about Sugar Agriculture, Agribusiness, Innovation & Technology and ESG',
     reactSlideFadeIn: 'react-slide-fade-in',
     reactSlideFadeInDescription: 'Package published on npmjs that adds a slide fade in effect to React components',
     gotOnFloppy: 'Game of Thrones on Floppy',

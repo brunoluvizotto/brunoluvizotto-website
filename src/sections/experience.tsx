@@ -9,7 +9,7 @@ const ContentWrapper = styled.div`
   width: 80%;
   max-width: 1100;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   font-size: 24px;
   gap: 50px;
   margin: 0 auto;
@@ -34,6 +34,15 @@ export const ExperienceSection = forwardRef<HTMLElement>((_props, ref) => {
   return (
     <Section title={localization('experiencesSectionTitle')} color="black" backgroundColor="white" ref={ref}>
       <ContentWrapper>
+        <FadeIn from="bottom" positionOffset={400} triggerOffset={300} delayInMilliseconds={0}>
+          <ExperienceCard
+            title={localization('leveregeCompanyName')}
+            subTitle={localization('leveregeJobTitle')}
+            date={localization('leveregeJobDate')}
+            imgSrc="https://storage.googleapis.com/brunoluvizotto-public/images/leverege.webp"
+            skills={[localization('leveregeSkill1'), localization('leveregeSkill2'), localization('leveregeSkill3')]}
+          />
+        </FadeIn>
         <FadeIn from="bottom" positionOffset={400} triggerOffset={300} delayInMilliseconds={0}>
           <ExperienceCard
             title="Liv Up"

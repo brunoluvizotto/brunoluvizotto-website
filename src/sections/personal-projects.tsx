@@ -1,4 +1,4 @@
-import React, { forwardRef, useContext } from 'react'
+import { forwardRef, useContext } from 'react'
 import styled from 'styled-components'
 import { Project } from '../common/components/project'
 import { MediaType } from '../common/components/project/media-component'
@@ -24,6 +24,24 @@ export const PersonalProjectsSection = forwardRef<HTMLElement>((_props, ref) => 
   return (
     <Section title={localization('personalProjects')} color="black" backgroundColor="#F2F2F2" ref={ref}>
       <ContentWrapper>
+        <Project
+          name={localization('augustoNeto')}
+          description={localization('augustoNetoDescription')}
+          media={{
+            type: MediaType.IMAGE,
+            src: 'https://storage.googleapis.com/brunoluvizotto-public/images/augusto-neto.webp',
+          }}
+          url="https://www.augustoneto.com"
+        />
+        <Project
+          name={localization('canaClippingWebsite')}
+          description={localization('canaClippingDescription')}
+          media={{
+            type: MediaType.IMAGE,
+            src: 'https://storage.googleapis.com/brunoluvizotto-public/images/cana-clipping.webp',
+          }}
+          url="https://www.canaclipping.com.br"
+        />
         <Project
           name={localization('reactSlideFadeIn')}
           description={localization('reactSlideFadeInDescription')}
