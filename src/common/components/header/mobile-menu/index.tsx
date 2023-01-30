@@ -28,6 +28,7 @@ type Props = {
   isOpen: boolean
   setOpen: () => void
   setClosed: () => void
+  children?: React.ReactNode
 }
 
 export const MobileMenu: FC<Props> = ({ isOpen, setOpen, setClosed, children }) => {

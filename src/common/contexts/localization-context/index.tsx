@@ -20,7 +20,11 @@ const defaultReturnObject = {
 
 export const LocalizationContext = createContext<UseLocalizationType>(defaultReturnObject)
 
-export const LocalizationProvider: FC = ({ children }) => {
+type Props = {
+  children?: React.ReactNode
+}
+
+export const LocalizationProvider: FC<Props> = ({ children }) => {
   const [language, setLanguage] = useState<Language>(defaultLanguage)
 
   useEffect(() => {
