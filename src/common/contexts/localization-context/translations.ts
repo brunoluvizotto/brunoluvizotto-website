@@ -17,7 +17,7 @@ export const translations: TranslationsObject = {
     jobTitle: 'Engenheiro de Software',
 
     aboutMeText:
-      'Meu nome é Bruno Luvizotto. Sou programador, formado em engenharia elétrica pela UNICAMP e estou sempre em busca de aprimorar meus conhecimentos. Tenho  com programação em JavaScript / Typescript (React, React-Native e Node), Python, C e C++ (Qt). Também já trabalhei com desenvolvimento de aplicativos mobile.',
+      'Meu nome é Bruno Luvizotto. Sou programador, formado em engenharia elétrica pela UNICAMP e estou sempre em busca de aprimorar meus conhecimentos. Tenho experiência com programação em JavaScript / Typescript (React, React-Native e Node), Python, C e C++ (Qt). Também já trabalhei com desenvolvimento de aplicativos mobile.',
     profilePictureAlt: 'Foto do Bruno com um farol ao fundo, em uma praia de pedras com uma vista do mar',
     contactButton: 'Contato',
 
