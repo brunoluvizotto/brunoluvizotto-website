@@ -34,7 +34,7 @@ export const PersonalProjectsSection = forwardRef<HTMLElement>((_props, ref) => 
           url="https://www.augustoneto.com"
         />
         <Project
-          name={localization('canaClippingWebsite')}
+          name={localization('canaClipping')}
           description={localization('canaClippingDescription')}
           media={{
             type: MediaType.IMAGE,
