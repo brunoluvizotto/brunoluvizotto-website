@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Bruno Luvizotto",
+    "role": "Full Stack Developer",
+    "tagline": "Building modern web applications with clean code and great user experiences.",
+    "cta_work": "View My Work"
+  },
+  "about": {
+    "heading": "About",
+    "bio": "I'm a Full Stack Developer with a background in Electrical Engineering from UNICAMP. I enjoy building products that make a difference — from IoT platforms and e-commerce systems to embedded software and open-source tools. I'm passionate about clean code, thoughtful architecture, and continuous learning.",
+    "education_title": "Education",
+    "languages_title": "Languages",
+    "lang_portuguese": "Portuguese (Native)",
+    "lang_english": "English (Fluent)",
+    "lang_italian": "Italian (Intermediate)",
+    "lang_french": "French (Basic)"
+  },
+  "experience": {
+    "heading": "Experience"
+  },
+  "projects": {
+    "heading": "Projects",
+    "live": "Live",
+    "source": "Source",
+    "youtube": "Video"
+  },
+  "skills": {
+    "heading": "Skills"
+  },
+  "contact": {
+    "heading": "Contact",
+    "subtitle": "Have a project in mind or just want to say hi? Feel free to reach out!",
+    "name_label": "Name",
+    "email_label": "Email",
+    "message_label": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Something went wrong. Please try again.",
+    "name_placeholder": "Your name",
+    "email_placeholder": "your@email.com",
+    "message_placeholder": "Your message..."
+  },
+  "footer": {
+    "built_with": "Built with React, TypeScript & Tailwind CSS",
+    "rights": "All rights reserved."
+  }
+}

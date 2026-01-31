@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://brunoluvizotto.com.br/sitemap.xml

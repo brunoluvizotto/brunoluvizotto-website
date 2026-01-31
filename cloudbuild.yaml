@@ -1,15 +1,19 @@
 steps:
-- name: node:16.13.2
-  entrypoint: npm
+- name: node:22
+  entrypoint: yarn
   args: ["install"]
-- name: node:16.13.2
-  entrypoint: npm
-  args: ["run", "create-env"]
+- name: node:22
+  entrypoint: yarn
+  args: ["build"]
+- name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+  entrypoint: bash
+  args:
+    - "-c"
+    - |
+      sed -i "s|\$${_RESEND_API_KEY}|$$_RESEND_API_KEY|g" app.yaml
+      gcloud app deploy --quiet
   env:
-    - 'NODE_ENV=${_NODE_ENV}'
-- name: node:16.13.2
-  entrypoint: npm
-  args: ["run", "build"]
-- name: "gcr.io/cloud-builders/gcloud"
-  args: ["app", "deploy"]
+    - "_RESEND_API_KEY=${_RESEND_API_KEY}"
 timeout: "1600s"
+substitutions:
+  _RESEND_API_KEY: ""

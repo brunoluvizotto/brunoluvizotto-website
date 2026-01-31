@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "skills": "Conhecimentos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "name": "Bruno Luvizotto",
+    "role": "Desenvolvedor Full Stack",
+    "tagline": "Construindo aplicações web modernas com código limpo e ótimas experiências de usuário.",
+    "cta_work": "Ver Meu Trabalho"
+  },
+  "about": {
+    "heading": "Sobre",
+    "bio": "Sou Desenvolvedor Full Stack com formação em Engenharia Elétrica pela UNICAMP. Gosto de construir produtos que fazem a diferença — de plataformas IoT e sistemas de e-commerce a software embarcado e ferramentas open-source. Sou apaixonado por código limpo, arquitetura bem pensada e aprendizado contínuo.",
+    "education_title": "Formação",
+    "languages_title": "Idiomas",
+    "lang_portuguese": "Português (Nativo)",
+    "lang_english": "Inglês (Fluente)",
+    "lang_italian": "Italiano (Intermediário)",
+    "lang_french": "Francês (Básico)"
+  },
+  "experience": {
+    "heading": "Experiência"
+  },
+  "projects": {
+    "heading": "Projetos",
+    "live": "Demo",
+    "source": "Código",
+    "youtube": "Vídeo"
+  },
+  "skills": {
+    "heading": "Conhecimentos"
+  },
+  "contact": {
+    "heading": "Contato",
+    "subtitle": "Tem um projeto em mente ou só quer dizer oi? Fique à vontade para entrar em contato!",
+    "name_label": "Nome",
+    "email_label": "Email",
+    "message_label": "Mensagem",
+    "send": "Enviar Mensagem",
+    "sending": "Enviando...",
+    "success": "Mensagem enviada com sucesso!",
+    "error": "Algo deu errado. Por favor, tente novamente.",
+    "name_placeholder": "Seu nome",
+    "email_placeholder": "seu@email.com",
+    "message_placeholder": "Sua mensagem..."
+  },
+  "footer": {
+    "built_with": "Feito com React, TypeScript & Tailwind CSS",
+    "rights": "Todos os direitos reservados."
+  }
+}

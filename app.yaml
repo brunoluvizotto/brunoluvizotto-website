@@ -1,19 +1,14 @@
-runtime: nodejs16
+runtime: nodejs22
 
 instance_class: F1
 
 env_variables:
   NODE_ENV: "production"
-  PORT: 8080
-
-inbound_services:
-- warmup
+  RESEND_API_KEY: "${_RESEND_API_KEY}"
 
 automatic_scaling:
-  min_instances: 1
+  min_instances: 0
   max_instances: 1
-  min_idle_instances: 0
-  max_idle_instances: 0
 
 handlers:
 - url: /.*
