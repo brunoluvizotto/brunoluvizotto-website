@@ -3,7 +3,7 @@ import type { Project } from "../types";
 export const projects: Project[] = [
   {
     id: "corridinhas",
-    title: "Corridinhas",
+    title: "Corridinhas.com.br",
     description: {
       en: "Brazil's #1 running events platform. Scrapes and aggregates race data from 20+ sources, providing a comprehensive calendar with search, filtering, and event discovery for runners of all levels — from 5K to marathons.",
       pt: "A principal plataforma de corridas de rua do Brasil. Coleta e agrega dados de corridas de mais de 20 fontes, oferecendo um calendário completo com busca, filtros e descoberta de eventos para corredores de todos os níveis — de 5K a maratonas.",
