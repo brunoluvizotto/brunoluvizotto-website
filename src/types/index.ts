@@ -15,7 +15,7 @@ export interface Experience {
 
 export interface Project {
   id: string;
-  title: string;
+  title: TranslatableString;
   description: TranslatableString;
   technologies: string[];
   image?: string;

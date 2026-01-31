@@ -21,14 +21,14 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           <div className="mb-4 overflow-hidden rounded-md">
             <img
               src={project.image}
-              alt={project.title}
+              alt={project.title[lang]}
               className="h-40 w-full object-cover transition-transform group-hover:scale-105"
             />
           </div>
         )}
 
         <h3 className="mb-2 font-mono text-lg font-semibold text-text">
-          {project.title}
+          {project.title[lang]}
         </h3>
 
         <p className="mb-4 flex-1 text-sm leading-relaxed text-subtext">
