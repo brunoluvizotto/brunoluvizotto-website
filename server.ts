@@ -8,7 +8,14 @@ const port = parseInt(process.env.PORT || "8080");
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.use(express.json());
-app.use(express.static(path.join(import.meta.dirname, "dist")));
+app.use(
+  "/assets",
+  express.static(path.join(import.meta.dirname, "dist", "assets"), {
+    maxAge: "1y",
+    immutable: true,
+  })
+);
+app.use(express.static(path.join(import.meta.dirname, "dist"), { maxAge: 0 }));
 
 app.post("/api/send", async (req, res) => {
   const { name, email, message } = req.body;
@@ -35,6 +42,7 @@ app.post("/api/send", async (req, res) => {
 });
 
 app.get("/{*path}", (_req, res) => {
+  res.setHeader("Cache-Control", "no-cache");
   res.sendFile(path.join(import.meta.dirname, "dist", "index.html"));
 });
 
