@@ -10,7 +10,7 @@
     "greeting": "Olá, eu sou",
     "name": "Bruno Luvizotto",
     "role": "Desenvolvedor Full Stack",
-    "tagline": "Construindo aplicações web modernas com código limpo e ótimas experiências de usuário.",
+    "tagline": "Construindo aplicações web modernas com código limpo e ótima UX.",
     "cta_work": "Ver Meu Trabalho"
   },
   "about": {
@@ -28,7 +28,7 @@
   },
   "projects": {
     "heading": "Projetos",
-    "live": "Demo",
+    "live": "Ver site",
     "source": "Código",
     "youtube": "Vídeo"
   },

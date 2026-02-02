@@ -14,8 +14,8 @@ export const experiences: Experience[] = [
       pt: "Nova York, NY (Remoto)",
     },
     description: {
-      en: "Building and maintaining a practice management SaaS platform for bookkeepers and accountants. Developing AI-powered features including intelligent bank feed categorization, automated journal entries, and AI financial summaries. Working across the full stack on client-facing tools, integrations with QuickBooks and Xero, and internal tooling.",
-      pt: "Construindo e mantendo uma plataforma SaaS de gestão para contadores e escritórios contábeis. Desenvolvendo funcionalidades com IA incluindo categorização inteligente de transações bancárias, lançamentos contábeis automatizados e resumos financeiros com IA. Atuando em toda a stack em ferramentas para clientes, integrações com QuickBooks e Xero, e ferramentas internas.",
+      en: "Build and maintain a practice management SaaS platform for bookkeepers and accountants. Developing AI-powered features including intelligent bank feed categorization, automated journal entries, and AI financial summaries. Working across the full stack on client-facing tools, integrations with QuickBooks and Xero, and internal tooling.",
+      pt: "Criar e dar suporte a uma plataforma SaaS de gestão para contadores e escritórios contábeis. Desenvolvendo funcionalidades com IA incluindo categorização inteligente de transações bancárias, lançamentos contábeis automatizados e resumos financeiros com IA. Atuando em toda a stack em ferramentas para clientes, integrações com QuickBooks e Xero, e ferramentas internas.",
     },
     technologies: [
       "React",
