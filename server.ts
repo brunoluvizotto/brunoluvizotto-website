@@ -27,14 +27,12 @@ app.post("/api/send", async (req, res) => {
 
   try {
     const emailSendResponse = await resend.emails.send({
-      from: "Website Contact <brunoluvizotto@gmail.com>",
+      from: "Website Contact <contact@brunoluvizotto.com>",
       to: "brunoluvizotto@gmail.com",
       replyTo: email,
       subject: `Website Contact: ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
     });
-
-    console.log({ resend: process.env.RESEND_API_KEY });
 
     console.log({ emailSendResponse });
 
