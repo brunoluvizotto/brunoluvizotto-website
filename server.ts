@@ -26,13 +26,17 @@ app.post("/api/send", async (req, res) => {
   }
 
   try {
-    await resend.emails.send({
+    const emailSendResponse = await resend.emails.send({
       from: "Website Contact <brunoluvizotto@gmail.com>",
       to: "brunoluvizotto@gmail.com",
       replyTo: email,
       subject: `Website Contact: ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
     });
+
+    console.log({ resend: process.env.RESEND_API_KEY });
+
+    console.log({ emailSendResponse });
 
     res.status(200).json({ success: true });
   } catch (error) {
