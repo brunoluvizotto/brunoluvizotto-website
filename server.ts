@@ -27,7 +27,7 @@ app.post("/api/send", async (req, res) => {
 
   try {
     const emailSendResponse = await resend.emails.send({
-      from: "Website Contact <contact@brunoluvizotto.com>",
+      from: "Website Contact <contact@brunoluvizotto.com.br>",
       to: "brunoluvizotto@gmail.com",
       replyTo: email,
       subject: `Website Contact: ${name}`,
