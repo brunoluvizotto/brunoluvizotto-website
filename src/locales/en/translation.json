@@ -9,13 +9,13 @@
   "hero": {
     "greeting": "Hi, I'm",
     "name": "Bruno Luvizotto",
-    "role": "Full Stack Developer",
+    "role": "Full Stack Engineer · AI Products",
     "tagline": "Building modern web applications with clean code and great UX.",
     "cta_work": "View my experiences"
   },
   "about": {
     "heading": "About",
-    "bio": "I'm a Full Stack Developer with a background in Electrical Engineering from UNICAMP. I enjoy building products that make a difference — from IoT platforms and e-commerce systems to embedded software and open-source tools. I'm passionate about clean code, thoughtful architecture, and continuous learning.",
+    "bio": "I'm a Full Stack Developer with a background in Electrical Engineering from UNICAMP. I enjoy building products that make a difference — from IoT platforms and e-commerce systems to embedded software and open-source tools. I'm passionate about clean code, thoughtful architecture, and continuous learning. Lately focused on shipping LLM features and building the evals that keep them reliable.",
     "education_title": "Education",
     "languages_title": "Languages",
     "lang_portuguese": "Portuguese (Native)",

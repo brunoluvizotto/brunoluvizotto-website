@@ -10,6 +10,7 @@ export interface Experience {
   period: string;
   location: TranslatableString;
   description: TranslatableString;
+  highlights?: TranslatableString[];
   technologies: string[];
 }
 

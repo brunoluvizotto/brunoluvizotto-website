@@ -9,13 +9,13 @@
   "hero": {
     "greeting": "Olá, eu sou",
     "name": "Bruno Luvizotto",
-    "role": "Desenvolvedor Full Stack",
+    "role": "Engenheiro Full Stack · Produtos de IA",
     "tagline": "Construindo aplicações web modernas com código limpo e ótima UX.",
     "cta_work": "Ver minhas experiências"
   },
   "about": {
     "heading": "Sobre",
-    "bio": "Sou Desenvolvedor Full Stack com formação em Engenharia Elétrica pela UNICAMP. Gosto de construir produtos que fazem a diferença — de plataformas IoT e sistemas de e-commerce a software embarcado e ferramentas open-source. Sou apaixonado por código limpo, arquitetura bem pensada e aprendizado contínuo.",
+    "bio": "Sou Desenvolvedor Full Stack com formação em Engenharia Elétrica pela UNICAMP. Gosto de construir produtos que fazem a diferença — de plataformas IoT e sistemas de e-commerce a software embarcado e ferramentas open-source. Sou apaixonado por código limpo, arquitetura bem pensada e aprendizado contínuo. Ultimamente focado em entregar funcionalidades com LLM e construir as avaliações que as mantêm confiáveis.",
     "education_title": "Formação",
     "languages_title": "Idiomas",
     "lang_portuguese": "Português (Nativo)",

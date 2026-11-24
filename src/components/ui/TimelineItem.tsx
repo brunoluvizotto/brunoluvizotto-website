@@ -45,6 +45,13 @@ export default function TimelineItem({ experience, index }: TimelineItemProps) {
             <p className="mb-4 text-sm leading-relaxed text-subtext">
               {experience.description[lang]}
             </p>
+            {experience.highlights && experience.highlights.length > 0 && (
+              <ul className="mb-4 mt-0 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-subtext">
+                {experience.highlights.map((highlight) => (
+                  <li key={highlight.en}>{highlight[lang]}</li>
+                ))}
+              </ul>
+            )}
             <div className="flex flex-wrap gap-2">
               {experience.technologies.map((tech) => (
                 <TechTag key={tech} label={tech} />

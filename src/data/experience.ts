@@ -14,20 +14,47 @@ export const experiences: Experience[] = [
       pt: "Nova York, NY (Remoto)",
     },
     description: {
-      en: "Build and maintain a practice management SaaS platform for bookkeepers and accountants. Developing AI-powered features including intelligent bank feed categorization, automated journal entries, and AI financial summaries. Working across the full stack on client-facing tools, integrations with QuickBooks and Xero, and internal tooling.",
-      pt: "Criar e dar suporte a uma plataforma SaaS de gestão para contadores e escritórios contábeis. Desenvolvendo funcionalidades com IA incluindo categorização inteligente de transações bancárias, lançamentos contábeis automatizados e resumos financeiros com IA. Atuando em toda a stack em ferramentas para clientes, integrações com QuickBooks e Xero, e ferramentas internas.",
+      en: "Build and maintain a practice management SaaS platform for bookkeepers and accountants, working across the full stack on client-facing tools, QuickBooks / Xero / Sage integrations and internal tooling. Led AI Flux Analysis, an LLM feature that explains month-over-month changes in P&L and Balance Sheet reports, and built the AI evaluation platform the team uses to benchmark models, catch regressions and choose models for the AI assistant and browser agents.",
+      pt: "Construo e mantenho uma plataforma SaaS de gestão para contadores e escritórios contábeis, atuando em toda a stack em ferramentas para clientes, integrações com QuickBooks / Xero / Sage e ferramentas internas. Liderei o AI Flux Analysis, uma funcionalidade de LLM que explica variações mês a mês nos relatórios de DRE e Balanço Patrimonial, e construí a plataforma de avaliação de IA que o time usa para comparar modelos, detectar regressões e escolher modelos para o assistente de IA e para agentes de navegador.",
     },
+    highlights: [
+      {
+        en: "Owned AI Flux Analysis end to end: LLM explanations of changes in P&L and Balance Sheet reports for QBO, Xero and Sage, with model selection (OpenAI, Gemini), user-supplied context, editing and publishing to report footnotes, and detection of out-of-date results.",
+        pt: "Responsável pelo AI Flux Analysis de ponta a ponta: explicações via LLM de variações nos relatórios de DRE e Balanço Patrimonial para QBO, Xero e Sage, com seleção de modelo (OpenAI, Gemini), contexto fornecido pelo usuário, edição e publicação nas notas dos relatórios, e detecção de resultados desatualizados.",
+      },
+      {
+        en: "Built the AI evaluation platform: eval suites defined in YAML, mocked tool responses, async runs, results stored in S3 for run-to-run comparison, plus cost and latency tracking.",
+        pt: "Construí a plataforma de avaliação de IA: suítes de eval definidas em YAML, respostas de ferramentas simuladas, execuções assíncronas, resultados armazenados no S3 para comparação entre execuções, além de rastreamento de custo e latência.",
+      },
+      {
+        en: "Ran model benchmarks that drove model upgrades for the in-app AI assistant, including one switch that was more accurate and about 3x cheaper.",
+        pt: "Conduzi benchmarks de modelos que orientaram upgrades do assistente de IA do produto, incluindo uma troca que ficou mais precisa e cerca de 3x mais barata.",
+      },
+      {
+        en: "Built evals and reliability fixes for a browser agent that does QuickBooks reconciliations (Browserbase).",
+        pt: "Construí evals e correções de confiabilidade para um agente de navegador que faz reconciliações no QuickBooks (Browserbase).",
+      },
+      {
+        en: "Added status-based triggers so agents start automatically in close workflows.",
+        pt: "Adicionei gatilhos por status para que agentes comecem automaticamente em fluxos de fechamento.",
+      },
+      {
+        en: "Compared LLM receipt extraction with AWS Textract and built its eval set.",
+        pt: "Comparei extração de recibos com LLM e com AWS Textract e construí o conjunto de eval correspondente.",
+      },
+    ],
     technologies: [
       "React",
       "TypeScript",
       "Node.js",
-      "Vite",
-      "AWS",
-      "Redux",
       "PostgreSQL",
       "Redis",
-      "AI / LLM",
-      "Firebase",
+      "AWS",
+      "Redux",
+      "OpenAI",
+      "Anthropic",
+      "LLM Evals",
+      "AI Agents",
     ],
   },
   {
