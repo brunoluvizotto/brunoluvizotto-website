@@ -44,9 +44,17 @@ export const skillCategories: SkillCategory[] = [
   {
     id: "ai",
     name: {
-      en: "AI",
-      pt: "IA",
+      en: "AI / LLM Engineering",
+      pt: "Engenharia de IA / LLM",
     },
-    skills: ["OpenAI", "Anthropic", "Embeddings", "RAG", "LLMs", "Prompt Engineering"],
+    skills: [
+      "LLM Evals & Benchmarking",
+      "AI Agents & Tool Calling",
+      "Browser Automation Agents",
+      "Prompt Engineering",
+      "OpenAI / Anthropic / Gemini APIs",
+      "AI-assisted Development (Claude Code)",
+      "Embeddings & RAG",
+    ],
   },
 ];
