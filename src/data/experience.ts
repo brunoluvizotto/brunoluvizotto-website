@@ -31,16 +31,12 @@ export const experiences: Experience[] = [
         pt: "Conduzi benchmarks de modelos que orientaram upgrades do assistente de IA do produto, incluindo uma troca que ficou mais precisa e cerca de 3x mais barata.",
       },
       {
-        en: "Built evals and reliability fixes for a browser agent that does QuickBooks reconciliations (Browserbase).",
-        pt: "Construí evals e correções de confiabilidade para um agente de navegador que faz reconciliações no QuickBooks (Browserbase).",
+        en: "Built evals and reliability fixes for a browser agent.",
+        pt: "Construí evals e correções de confiabilidade para um agente de navegador.",
       },
       {
         en: "Added status-based triggers so agents start automatically in close workflows.",
         pt: "Adicionei gatilhos por status para que agentes comecem automaticamente em fluxos de fechamento.",
-      },
-      {
-        en: "Compared LLM receipt extraction with AWS Textract and built its eval set.",
-        pt: "Comparei extração de recibos com LLM e com AWS Textract e construí o conjunto de eval correspondente.",
       },
     ],
     technologies: [
